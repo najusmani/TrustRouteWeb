@@ -15,7 +15,7 @@ export const INTERESTS = {
   sms: 'SMS Banking',
   whatsapp: 'WhatsApp Banking',
   wallet: 'Wallet Banking',
-  simulators: 'SwitchProof (FLEXCUBE testing & switch)',
+  simulators: 'SwitchProof (Oracle FLEXCUBE switch & regression testing)',
   feip: 'FEIP (FLEXCUBE parameterization)',
   meridian: 'Meridian (customer intelligence)',
   other: 'Something else',
