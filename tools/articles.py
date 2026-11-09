@@ -16,6 +16,42 @@ AUTHOR = 'TrustRoute Technologies'
 
 ARTICLES = [
 {
+ 'slug': 'introducing-ai-and-agency-banking',
+ 'category': 'News',
+ 'title': 'Introducing AI Banking and Agency Banking',
+ 'seo_title': 'Introducing AI Banking and Agency Banking | TrustRoute',
+ 'description': 'Two new TrustRoute solutions: AI Banking for customers, staff and risk teams, and Agency Banking to bring banking closer to every customer.',
+ 'image': '1531746790731-6c087fecd65a', 'image_alt': 'A white robotic hand, representing artificial intelligence',
+ 'takeaways': [
+   'AI Banking brings AI to customers, staff and risk teams, with people in control.',
+   'Agency Banking turns local shops and outlets into points of service.',
+   'Both integrate with your core banking system and our other solutions.',
+   'Demonstrations are available now.',
+ ],
+ 'body': """
+<p class="lead">Today we are introducing two new solutions. Both answer the same question that banks ask us most often: how do we serve more customers, better, without adding cost and risk?</p>
+
+<h2>AI Banking: intelligence, <em>under your control</em></h2>
+<p>AI is changing what customers expect and what banking teams can do. But in a regulated industry, AI is only valuable when it is useful, explainable and governed. <a href="/ai-banking">AI Banking</a> brings it to four places where it helps most:</p>
+<ul>
+<li><strong>A customer AI assistant</strong> that answers questions, checks balances and guides customers through everyday tasks on the web, in your app or on WhatsApp, and hands over to a person when needed.</li>
+<li><strong>A staff AI copilot</strong> that helps employees find policies, summarise documents and draft responses.</li>
+<li><strong>Fraud and anomaly detection</strong> that flags unusual transactions and behaviour for review.</li>
+<li><strong>Credit scoring and risk</strong> insights that support, rather than replace, your credit decisions.</li>
+</ul>
+<p>Every capability is designed with human oversight, audit trails and data protection from the start. AI suggests and flags; your people decide.</p>
+
+<h2>Agency Banking: closer to <em>every customer</em></h2>
+<p>Branches cannot be everywhere, but trusted local agents can. <a href="/agency-banking">Agency Banking</a> turns shops and outlets into points of service, so customers can deposit and withdraw cash, open accounts, complete KYC and make payments close to home. Banks get the tools to run the network: agent onboarding and management, float visibility, and commissions that are calculated and paid automatically.</p>
+
+<h2>Built to work together</h2>
+<p>Both solutions integrate with your core banking system and complement our existing range. The AI assistant can run alongside <a href="/whatsapp-banking">WhatsApp Banking</a>; agents give <a href="/wallet-banking">Wallet Banking</a> customers convenient places to cash in and out; and <a href="/meridian">Meridian</a> brings it all together in a single view of each customer.</p>
+
+<h2>See them in action</h2>
+<p>Demonstrations of AI Banking and Agency Banking are available now. If you are exploring how AI or agent networks could work at your institution, we would be glad to show you, and to talk through how each would fit your systems, your customers and your regulator.</p>
+""",
+},
+{
  'slug': 'iso-20022-migration',
  'category': 'Payments',
  'title': 'ISO 20022 migration: what banks should be planning for now',
