@@ -18,6 +18,8 @@ export const INTERESTS = {
   simulators: 'SwitchProof (Oracle FLEXCUBE switch & regression testing)',
   feip: 'FEIP (FLEXCUBE parameterization)',
   meridian: 'Meridian (customer intelligence)',
+  ai: 'AI Banking',
+  agency: 'Agency Banking',
   other: 'Something else',
 };
 
