@@ -148,5 +148,6 @@ node --test supabase/functions/contact/handler.test.mjs
 | `supabase/migrations/` | Database table for enquiries |
 | `supabase/functions/contact/` | The contact-form function (`handler.js` holds the logic) |
 | `.github/workflows/pages.yml` | Publishes `site/` to GitHub Pages |
+| `tools/serve.mjs` | Local preview with clean URLs: `node tools/serve.mjs`, then open http://localhost:8080 |
 | `brand/` | Logo files, brand guidelines, stationery (not published) |
 | `mockups/` | Earlier design options (not published) |
