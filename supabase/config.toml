@@ -1,0 +1,8 @@
+# Supabase project settings for TrustRoute Technologies.
+# Only the parts this project uses are listed; the Supabase CLI fills in defaults.
+
+[functions.contact]
+# The website's contact form is public, so it calls this function without a
+# Supabase login token. The function protects itself with an origin check,
+# a hidden spam field and a per-connection rate limit.
+verify_jwt = false

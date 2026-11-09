@@ -1,0 +1,15 @@
+# Secrets: never commit these
+.env
+.env.*
+supabase/.env
+supabase/functions/.env
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/
+
+# Local tooling
+.claude/
+node_modules/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustRoute Business Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:85mm 55mm;margin:0}
+*{box-sizing:border-box}
+body{margin:0;background:#E9E5DC;font-family:Jost,sans-serif;display:flex;flex-wrap:wrap;gap:32px;justify-content:center;padding:48px 16px}
+.card{width:85mm;height:55mm;position:relative;overflow:hidden;box-shadow:0 18px 40px -18px rgba(9,21,48,.45);flex:none}
+.front{background:#0E1F3F;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff}
+.front:after{content:"";position:absolute;inset:3.2mm;border:.2mm solid rgba(201,174,120,.45)}
+.front .wm{font:500 15pt/1 "Cormorant Garamond",serif;letter-spacing:.22em;margin-top:4mm}
+.front small{font:400 5.2pt/1 Jost;letter-spacing:.6em;color:#C9AE78;margin-top:2mm}
+.back{background:#fff;padding:7mm 7.5mm;color:#1A2133;display:flex;flex-direction:column;justify-content:space-between}
+.back .name{font:400 15pt/1.1 "Cormorant Garamond",serif;color:#0E1F3F}
+.back .title{font:500 5.6pt Jost;letter-spacing:.24em;text-transform:uppercase;color:#A8833F;margin-top:1.6mm}
+.back .row{display:flex;justify-content:space-between;align-items:flex-end}
+.back .contact{font:300 6.6pt/1.65 Jost;color:#1A2133}
+.back .contact span{color:#7C7768;display:inline-block;width:5mm}
+.back svg{width:9mm;height:9mm}
+.back .rule{position:absolute;left:7.5mm;top:22mm;width:10mm;height:.25mm;background:#A8833F}
+p.hint{width:100%;text-align:center;font-size:13px;color:#5F6573;margin:0}
+@media print{body{background:none;padding:0;gap:0;display:block}.card{box-shadow:none;page-break-after:always}p.hint{display:none}}
+</style>
+</head>
+<body>
+<p class="hint">Edit the name and details on the back, then print to PDF at 85 × 55 mm for your printer (ask them to add 3 mm bleed).</p>
+<div class="card front">
+  <svg width="52" height="52" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#C9AE78" stroke-width=".9"/><path d="M28 7.5 L48.5 28 L28 48.5 L7.5 28 Z" fill="none" stroke="#C9AE78" stroke-width=".45" stroke-dasharray="1 2.4"/><g fill="none" stroke="#fff" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#C9AE78"/></svg>
+  <div class="wm">TRUSTROUTE</div>
+  <small>TECHNOLOGIES</small>
+</div>
+<div class="card back">
+  <div>
+    <div class="name" contenteditable>Najeebullah Usmani</div>
+    <div class="title" contenteditable>Founder &amp; Principal Consultant</div>
+  </div>
+  <span class="rule"></span>
+  <div class="row">
+    <div class="contact" contenteditable>
+      <span>E</span>najeeb@trustroutetechnologies.com<br>
+      <span>T</span>+00 000 000 0000<br>
+      <span>W</span>trustroutetechnologies.com
+    </div>
+    <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#A8833F" stroke-width="1.2"/><g fill="none" stroke="#0E1F3F" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.6"/><path d="M28 20.5 V36.5" stroke-width="2.6"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#A8833F"/></svg>
+  </div>
+</div>
+</body>
+</html>

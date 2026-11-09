@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustRoute Brand Guidelines</title>
+<link rel="icon" href="logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1F3F;--navy-deep:#091530;--ink:#1A2133;--stone:#7C7768;--mute:#5F6573;--gold:#A8833F;--gold-soft:#C9AE78;--ivory:#F7F4EE;--hair:#E5DFD3;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:300 16px/1.7 var(--sans)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+.label{font:500 11px var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+header.cover{background:var(--navy-deep);color:#fff;padding:120px 0 100px}
+.cover h1{font-size:clamp(52px,7vw,96px);line-height:1;margin:40px 0 24px}
+.cover h1 em{color:var(--gold-soft)}
+.cover p{color:rgba(255,255,255,.7);max-width:560px}
+nav.toc{border-bottom:1px solid var(--hair);position:sticky;top:0;background:rgba(255,255,255,.97);z-index:5}
+nav.toc .wrap{display:flex;gap:28px;overflow-x:auto;height:58px;align-items:center;font:400 12px var(--sans);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+nav.toc a{color:var(--mute);text-decoration:none}nav.toc a:hover{color:var(--gold)}
+section{padding:110px 0;border-bottom:1px solid var(--hair)}
+.sh{display:grid;grid-template-columns:3fr 9fr;gap:40px;margin-bottom:56px}
+.sh h2{font-size:clamp(38px,4vw,56px);line-height:1.05;color:var(--navy)}
+.sh h2 em{color:var(--gold)}
+.sh p{color:var(--mute);max-width:620px;margin:18px 0 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tile{border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;padding:56px 32px;min-height:240px;position:relative}
+.tile small{position:absolute;left:16px;bottom:12px;font:400 10px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--stone)}
+.tile.dark{background:var(--navy);border-color:var(--navy)}.tile.dark small{color:rgba(255,255,255,.5)}
+.tile.ivory{background:var(--ivory)}
+.tile img{max-width:100%;height:auto}
+.note{background:var(--ivory);border-left:2px solid var(--gold);padding:18px 22px;color:var(--mute);font-size:15px;margin-top:28px}
+ul.rules{list-style:none;padding:0;margin:0;columns:2;column-gap:48px}
+ul.rules li{padding:12px 0;border-top:1px solid var(--hair);break-inside:avoid}
+ul.rules li b{font-weight:500;color:var(--navy)}
+.sw{border:1px solid var(--hair)}
+.sw .c{height:150px}
+.sw div.t{padding:16px 18px}
+.sw b{display:block;font:400 22px var(--serif);color:var(--navy)}
+.sw code{font:400 12px ui-monospace,monospace;color:var(--mute);display:block;margin-top:4px}
+.sw span{font-size:13px;color:var(--mute)}
+.ratio{display:flex;height:22px;margin-top:28px}
+.type-row{display:grid;grid-template-columns:3fr 9fr;gap:40px;padding:36px 0;border-top:1px solid var(--hair);align-items:baseline}
+.type-row .meta{font-size:13px;color:var(--mute)}
+.type-row .meta b{display:block;font:500 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.photo{aspect-ratio:4/3;background-size:cover;background-position:center}
+.voice div{border-top:1px solid var(--navy);padding-top:22px}
+.voice h3{font-size:28px;color:var(--navy);margin-bottom:10px}
+.voice p{color:var(--mute);margin:0 0 6px;font-size:15px}
+.voice .yes:before{content:"Say  ";color:var(--gold);font-weight:500}
+.voice .no:before{content:"Avoid  ";color:#9a4b3c;font-weight:500}
+.apps a{display:block;text-decoration:none;color:inherit;border:1px solid var(--hair);padding:32px;transition:border-color .3s}
+.apps a:hover{border-color:var(--gold)}
+.apps h3{font-size:28px;color:var(--navy);margin:14px 0 8px}
+.apps p{color:var(--mute);margin:0;font-size:15px}
+footer{padding:60px 0;color:var(--mute);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:900px){.sh,.type-row{grid-template-columns:1fr;gap:12px}.g3,.g4{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}ul.rules{columns:1}}
+@media(max-width:560px){.wrap{padding:0 16px}.g3,.g4{grid-template-columns:1fr}section{padding:80px 0}}
+</style>
+</head>
+<body>
+<header class="cover"><div class="wrap">
+  <img src="logo/trustroute-logo-reversed.svg" alt="TrustRoute Technologies" width="320">
+  <h1>Brand <em>Guidelines</em></h1>
+  <p>How TrustRoute Technologies looks, sounds and presents itself. Version 1.0.</p>
+</div></header>
+<nav class="toc"><div class="wrap"><a href="#essence">Essence</a><a href="#logo">Logo</a><a href="#colour">Colour</a><a href="#type">Typography</a><a href="#photo">Photography</a><a href="#voice">Voice</a><a href="#apps">Applications</a></div></nav>
+
+<section id="essence"><div class="wrap">
+  <div class="sh"><span class="label">01 · Essence</span><div><h2>Trusted counsel for the <em>future of banking.</em></h2><p>TrustRoute is an independent banking technology firm. Our brand should feel like a private bank: discreet, assured, precise, and never loud.</p></div></div>
+  <div class="g4">
+    <div class="tile ivory" style="flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;padding:28px"><span class="label">Mission</span><p style="font:400 21px/1.35 var(--serif);color:var(--navy);margin:14px 0 0">To give every bank technology it can trust, and the counsel to choose it well.</p></div>
+    <div class="tile ivory" style="flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;padding:28px"><span class="label">Vision</span><p style="font:400 21px/1.35 var(--serif);color:var(--navy);margin:14px 0 0">To be the most trusted route between banks and the customers they serve.</p></div>
+    <div class="tile ivory" style="flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;padding:28px"><span class="label">Tagline</span><p style="font:italic 400 21px/1.35 var(--serif);color:var(--navy);margin:14px 0 0">Trusted counsel for the future of banking.</p></div>
+    <div class="tile ivory" style="flex-direction:column;align-items:flex-start;justify-content:flex-start;min-height:0;padding:28px"><span class="label">Personality</span><p style="font:400 21px/1.35 var(--serif);color:var(--navy);margin:14px 0 0">Discreet · Assured · Precise · Independent</p></div>
+  </div>
+</div></section>
+
+<section id="logo"><div class="wrap">
+  <div class="sh"><span class="label">02 · Logo</span><div><h2>The emblem and <em>wordmark.</em></h2><p>A diamond, the classic mark of value and a junction on a route, frames a finely serifed T. Beneath it, a small gold diamond marks the destination: a transaction safely arrived.</p></div></div>
+  <div class="g2">
+    <div class="tile"><img src="logo/trustroute-logo.svg" alt="Primary logo" width="380"><small>Primary · on light</small></div>
+    <div class="tile dark"><img src="logo/trustroute-logo-reversed.svg" alt="Reversed logo" width="380"><small>Reversed · on navy</small></div>
+  </div>
+  <div class="g3" style="margin-top:24px">
+    <div class="tile ivory"><img src="logo/trustroute-logo-stacked.svg" alt="Stacked logo" width="200"><small>Stacked</small></div>
+    <div class="tile"><img src="logo/trustroute-emblem.svg" alt="Emblem" width="110"><small>Emblem</small></div>
+    <div class="tile ivory"><img src="logo/favicon.svg" alt="Favicon and app icon" width="96"><small>Favicon · app icon</small></div>
+  </div>
+  <ul class="rules" style="margin-top:48px">
+    <li><b>Clear space.</b> Keep space equal to the height of the emblem's T on every side.</li>
+    <li><b>Minimum size.</b> Full logo 140px wide on screen (35mm in print); emblem 24px.</li>
+    <li><b>Backgrounds.</b> Primary on white or ivory; reversed on navy or dark photography.</li>
+    <li><b>Wordmark.</b> Always set in capitals with wide letter-spacing, as drawn.</li>
+    <li><b>Do not</b> recolour, stretch, rotate, outline or add shadows to the logo.</li>
+    <li><b>Do not</b> place the logo on busy photography without a navy veil.</li>
+  </ul>
+  <p class="note">Before printing, have a designer convert the wordmark text in the SVG files to outlines, so the logo looks the same on every computer and printer.</p>
+</div></section>
+
+<section id="colour"><div class="wrap">
+  <div class="sh"><span class="label">03 · Colour</span><div><h2>Navy, ivory, <em>and a touch of gold.</em></h2><p>Navy carries authority; ivory and white give space and calm. Gold is a signature, not a colour scheme: use it for small accents only.</p></div></div>
+  <div class="g4">
+    <div class="sw"><div class="c" style="background:#0E1F3F"></div><div class="t"><b>Ledger Navy</b><code>#0E1F3F · RGB 14 31 63</code><span>Headings, dark sections</span></div></div>
+    <div class="sw"><div class="c" style="background:#091530"></div><div class="t"><b>Midnight</b><code>#091530 · RGB 9 21 48</code><span>Photo veils, footers</span></div></div>
+    <div class="sw"><div class="c" style="background:#A8833F"></div><div class="t"><b>Heritage Gold</b><code>#A8833F · RGB 168 131 63</code><span>Labels, accents on light</span></div></div>
+    <div class="sw"><div class="c" style="background:#C9AE78"></div><div class="t"><b>Soft Gold</b><code>#C9AE78 · RGB 201 174 120</code><span>Accents on navy</span></div></div>
+    <div class="sw"><div class="c" style="background:#F7F4EE"></div><div class="t"><b>Ivory</b><code>#F7F4EE · RGB 247 244 238</code><span>Alternate backgrounds</span></div></div>
+    <div class="sw"><div class="c" style="background:#FFFFFF"></div><div class="t"><b>White</b><code>#FFFFFF</code><span>Primary background</span></div></div>
+    <div class="sw"><div class="c" style="background:#1A2133"></div><div class="t"><b>Ink</b><code>#1A2133 · RGB 26 33 51</code><span>Body text</span></div></div>
+    <div class="sw"><div class="c" style="background:#7C7768"></div><div class="t"><b>Stone</b><code>#7C7768 · RGB 124 119 104</code><span>Captions, metadata</span></div></div>
+  </div>
+  <div class="ratio" aria-label="Recommended colour proportions"><span style="flex:50;background:#fff;border:1px solid var(--hair)"></span><span style="flex:20;background:#F7F4EE"></span><span style="flex:25;background:#0E1F3F"></span><span style="flex:5;background:#A8833F"></span></div>
+  <p style="font-size:13px;color:var(--mute);margin-top:10px">Proportion guide: white 50% · ivory 20% · navy 25% · gold 5%</p>
+</div></section>
+
+<section id="type"><div class="wrap">
+  <div class="sh"><span class="label">04 · Typography</span><div><h2>A classic serif, <em>a quiet sans.</em></h2><p>Both typefaces are free from Google Fonts. In Microsoft Office, use Garamond and Century Gothic as substitutes.</p></div></div>
+  <div class="type-row"><div class="meta"><b>Display</b>Cormorant Garamond 400, italic for emphasis</div><div style="font:400 clamp(44px,5vw,72px)/1.05 var(--serif);color:var(--navy)">Trusted counsel for the <em style="color:var(--gold)">future of banking.</em></div></div>
+  <div class="type-row"><div class="meta"><b>Heading</b>Cormorant Garamond 400 · 30–50px</div><div style="font:400 36px/1.2 var(--serif);color:var(--navy)">Core Banking &amp; Switch Advisory</div></div>
+  <div class="type-row"><div class="meta"><b>Label</b>Jost 500 · 11px · capitals · 0.32em tracking</div><div class="label">Banking Technology Advisory &amp; Solutions</div></div>
+  <div class="type-row"><div class="meta"><b>Body</b>Jost 300 · 17px · 1.75 line height</div><div style="font:300 17px/1.75 var(--sans);max-width:620px">We advise banks and financial institutions worldwide, and deliver the digital channels and payment systems their customers depend on.</div></div>
+</div></section>
+
+<section id="photo"><div class="wrap">
+  <div class="sh"><span class="label">05 · Photography</span><div><h2>Architecture, light <em>and quiet confidence.</em></h2><p>Choose images of strong architecture, cities and calm professional settings. Cool, natural tones. On dark sections, lay a navy veil (Midnight at 80–90%) over the photograph so text stays legible.</p></div></div>
+  <div class="g4">
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=70&auto=format&fit=crop')"></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=600&q=70&auto=format&fit=crop')"></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=600&q=70&auto=format&fit=crop')"></div>
+    <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=600&q=70&auto=format&fit=crop')"></div>
+  </div>
+  <ul class="rules" style="margin-top:40px">
+    <li><b>Use</b> architecture, skylines, considered workspaces, hands on devices.</li>
+    <li><b>Avoid</b> cash piles, padlocks, glowing circuit boards, staged handshakes.</li>
+    <li><b>People</b> appear natural and unposed; never present stock models as staff.</li>
+    <li><b>Founder and team</b> photos should be professional portraits on plain backgrounds.</li>
+  </ul>
+</div></section>
+
+<section id="voice"><div class="wrap">
+  <div class="sh"><span class="label">06 · Voice</span><div><h2>Speak as a <em>trusted adviser.</em></h2><p>Write the way a senior partner speaks to a bank's board: calm, specific and brief. Use British spelling consistently.</p></div></div>
+  <div class="g3 voice">
+    <div><h3>Assured, not boastful</h3><p class="yes">We help institutions choose, build and certify the systems that move money.</p><p class="no">We are the world's leading revolutionary fintech.</p></div>
+    <div><h3>Precise, not jargon-heavy</h3><p class="yes">Test every payment route before it reaches a customer.</p><p class="no">Leverage synergistic end-to-end paradigms.</p></div>
+    <div><h3>Honest about limits</h3><p class="yes">Our simulators help you prepare for certification.</p><p class="no">Guaranteed certification, 100% secure.</p></div>
+  </div>
+</div></section>
+
+<section id="apps"><div class="wrap">
+  <div class="sh"><span class="label">07 · Applications</span><div><h2>The brand <em>in use.</em></h2><p>Ready-made templates. Open each one in a browser; print to PDF where noted.</p></div></div>
+  <div class="g4 apps">
+    <a href="stationery/business-card.html"><span class="label">Print</span><h3>Business Card</h3><p>85 × 55 mm, front and back.</p></a>
+    <a href="stationery/letterhead.html"><span class="label">Print · PDF</span><h3>Letterhead</h3><p>A4, for proposals and letters.</p></a>
+    <a href="stationery/email-signature.html"><span class="label">Email</span><h3>Email Signature</h3><p>Copy and paste into Outlook or Gmail.</p></a>
+    <a href="stationery/linkedin-banner.svg"><span class="label">Social</span><h3>LinkedIn Banner</h3><p>1584 × 396 px company cover.</p></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">TrustRoute Technologies · Brand Guidelines v1.0</div></footer>
+</body>
+</html>

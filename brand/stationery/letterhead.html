@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustRoute Letterhead</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+body{margin:0;background:#E9E5DC;font:300 10.5pt/1.7 Jost,sans-serif;color:#1A2133}
+.page{width:210mm;min-height:297mm;margin:32px auto;background:#fff;position:relative;padding:22mm 22mm 34mm;box-shadow:0 20px 50px -24px rgba(9,21,48,.45)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:.3mm solid #E5DFD3;padding-bottom:9mm}
+.logo{display:flex;align-items:center;gap:4mm;color:#0E1F3F}
+.logo b{display:block;font:500 15pt/1 "Cormorant Garamond",serif;letter-spacing:.22em}
+.logo small{display:block;font:400 5.6pt/1 Jost;letter-spacing:.6em;color:#7C7768;margin-top:1.6mm}
+.addr{text-align:right;font:300 7.6pt/1.7 Jost;color:#5F6573}
+.body{padding-top:16mm;min-height:200mm}
+.body .date{color:#7C7768;margin-bottom:12mm}
+.body h1{font:400 20pt/1.2 "Cormorant Garamond",serif;color:#0E1F3F;margin:0 0 8mm}
+.body p{margin:0 0 4.5mm}
+.sig{margin-top:14mm}
+.sig b{display:block;font:400 14pt "Cormorant Garamond",serif;color:#0E1F3F}
+.sig span{font:500 6.6pt Jost;letter-spacing:.24em;text-transform:uppercase;color:#A8833F}
+.foot{position:absolute;left:22mm;right:22mm;bottom:12mm;border-top:.3mm solid #E5DFD3;padding-top:4mm;display:flex;justify-content:space-between;font:400 6.6pt Jost;letter-spacing:.2em;text-transform:uppercase;color:#7C7768}
+.foot i{font-style:normal;color:#A8833F}
+.edge{position:absolute;left:0;top:0;bottom:0;width:3.2mm;background:#0E1F3F}
+.edge:after{content:"";position:absolute;left:0;top:22mm;width:3.2mm;height:18mm;background:#A8833F}
+p.hint{text-align:center;font-size:13px;color:#5F6573;margin:24px 16px 0}
+@media print{body{background:none}.page{margin:0;box-shadow:none}p.hint{display:none}}
+@media(max-width:820px){.page{transform-origin:top left;width:210mm}}
+</style>
+</head>
+<body>
+<p class="hint">Click into the letter to edit it, then print to PDF (A4, margins: none, background graphics: on).</p>
+<div class="page">
+  <span class="edge"></span>
+  <div class="top">
+    <div class="logo">
+      <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#A8833F" stroke-width=".9"/><path d="M28 7.5 L48.5 28 L28 48.5 L7.5 28 Z" fill="none" stroke="#A8833F" stroke-width=".45" stroke-dasharray="1 2.4"/><g fill="none" stroke="#0E1F3F" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#A8833F"/></svg>
+      <div><b>TRUSTROUTE</b><small>TECHNOLOGIES</small></div>
+    </div>
+    <div class="addr" contenteditable>21st Avenue<br>Burnaby, British Columbia, Canada<br>hello@trustroutetechnologies.com<br>trustroutetechnologies.com</div>
+  </div>
+  <div class="body" contenteditable>
+    <div class="date">[Date]</div>
+    <p>[Recipient name]<br>[Title]<br>[Institution]<br>[Address]</p>
+    <br>
+    <h1>[Subject of the letter]</h1>
+    <p>Dear [Name],</p>
+    <p>[Body of the letter.]</p>
+    <p>Yours sincerely,</p>
+    <div class="sig"><b>Najeebullah Usmani</b><span>Founder &amp; Principal Consultant</span></div>
+  </div>
+  <div class="foot"><span>TrustRoute Technologies</span><span>Trusted counsel for the future of banking</span></div>
+</div>
+</body>
+</html>

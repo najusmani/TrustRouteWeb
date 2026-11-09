@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396" role="img" aria-label="TrustRoute Technologies LinkedIn banner">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Jost:wght@400;500&amp;display=swap');</style>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#091530"/><stop offset="1" stop-color="#14295A"/></linearGradient>
+  </defs>
+  <rect width="1584" height="396" fill="url(#bg)"/>
+  <g fill="none" stroke="#C9AE78" stroke-opacity=".14">
+    <path d="M1300 -60 L1556 198 L1300 456 L1044 198 Z"/>
+    <path d="M1300 -10 L1506 198 L1300 406 L1094 198 Z"/>
+    <path d="M1300 40 L1456 198 L1300 356 L1144 198 Z"/>
+  </g>
+  <path d="M760 340 C 900 300, 1000 240, 1080 198 S 1260 110, 1400 70" fill="none" stroke="#C9AE78" stroke-opacity=".6" stroke-width="1.2"/>
+  <circle cx="1080" cy="198" r="4.5" fill="#C9AE78"/>
+  <circle cx="1080" cy="198" r="13" fill="none" stroke="#C9AE78" stroke-opacity=".45"/>
+  <circle cx="1400" cy="70" r="3.5" fill="#C9AE78"/>
+  <g transform="translate(420 0)">
+    <text x="0" y="168" font-family="Jost, 'Century Gothic', sans-serif" font-size="13" font-weight="500" letter-spacing="4.2" fill="#C9AE78">BANKING TECHNOLOGY ADVISORY &amp; SOLUTIONS</text>
+    <text x="0" y="232" font-family="'Cormorant Garamond', Garamond, Georgia, serif" font-size="54" fill="#FFFFFF">Trusted counsel for the <tspan font-style="italic" fill="#C9AE78">future of banking.</tspan></text>
+    <text x="0" y="276" font-family="Jost, 'Century Gothic', sans-serif" font-size="15" letter-spacing="3" fill="#FFFFFF" fill-opacity=".6">TRUSTROUTETECHNOLOGIES.COM</text>
+  </g>
+</svg>

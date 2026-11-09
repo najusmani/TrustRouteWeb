@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · TrustRoute Technologies</title>
+<meta name="description" content="Contact TrustRoute Technologies to arrange a consultation or request a solution demonstration.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="index.html" aria-label="TrustRoute Technologies, home">
+    <svg width="46" height="46" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#C9AE78" stroke-width=".9"/><path d="M28 7.5 L48.5 28 L28 48.5 L7.5 28 Z" fill="none" stroke="#C9AE78" stroke-width=".45" stroke-dasharray="1 2.4"/><g class="t" fill="none" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#C9AE78"/></svg>
+    <span class="wm"><b>TRUSTROUTE</b><small>TECHNOLOGIES</small></span>
+  </a>
+  <nav class="menu" aria-label="Primary"><a href="about.html">The Firm</a><a href="advisory.html">Advisory</a><a href="solutions.html">Solutions</a><a href="insights.html">Insights</a><a class="contact" href="contact.html" aria-current="page">Contact</a></nav>
+  <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+</div></header>
+<div class="drawer" id="drawer"><a href="index.html">Home</a><a href="about.html">The Firm</a><a href="advisory.html">Advisory</a><a href="solutions.html">Solutions</a><a href="insights.html">Insights</a><a href="contact.html" aria-current="page">Contact</a><div class="meta">hello@trustroutetechnologies.com</div></div>
+
+<main id="main">
+<section class="page-hero short">
+  <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=2200&q=80&auto=format&fit=crop')" role="img" aria-label="Towers rising into a pale sky"></div>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="crumbs ld d1"><a href="index.html">Home</a><span>/</span>Contact</div>
+    <h1 class="ld d2">Begin <em>the conversation.</em></h1>
+    <p class="lede ld d3">Tell us where you are today. Every enquiry is treated in confidence.</p>
+  </div>
+</section>
+
+<section class="pad"><div class="wrap contact-grid">
+  <div class="rv">
+    <div class="label">Enquiry</div>
+    <h2 style="font:400 clamp(36px,3.6vw,52px)/1.1 var(--serif);color:var(--navy);margin:20px 0 56px">How can <em style="color:var(--gold)">we help?</em></h2>
+    <!-- Sends to the Supabase Edge Function "contact". Replace YOUR-PROJECT-REF with your Supabase project reference (see SETUP.md). -->
+    <form class="form" id="enquiry" action="https://YOUR-PROJECT-REF.supabase.co/functions/v1/contact" method="post" novalidate>
+      <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <div class="field"><label for="name">Full name <i>*</i></label><input id="name" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="org">Institution <i>*</i></label><input id="org" name="organisation" autocomplete="organization" required></div>
+      <div class="field"><label for="role">Role</label><input id="role" name="role" autocomplete="organization-title"></div>
+      <div class="field"><label for="email">Work email <i>*</i></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="country">Country</label><input id="country" name="country" autocomplete="country-name"></div>
+      <div class="field full"><label for="interest">Area of interest</label>
+        <select id="interest" name="interest">
+          <option value="consultation">Advisory consultation</option>
+          <option value="flexcube">Oracle FLEXCUBE advisory</option>
+          <option value="demo">Solution demonstration</option>
+          <option value="sms">SMS Banking</option>
+          <option value="whatsapp">WhatsApp Banking</option>
+          <option value="wallet">Wallet Banking</option>
+          <option value="simulators">Switch Test Simulators</option>
+          <option value="feip">FEIP (FLEXCUBE parameterization)</option>
+          <option value="meridian">Meridian (customer intelligence)</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="field full"><label for="message">Message <i>*</i></label><textarea id="message" name="message" required placeholder="A few words about your institution and what you are planning."></textarea></div>
+      <label class="consent full"><input type="checkbox" name="consent" required> I agree that TrustRoute Technologies may use these details to respond to my enquiry, as described in the <a href="privacy.html" style="border-bottom:1px solid var(--hair)">privacy notice</a>.</label>
+      <div class="full"><button class="btn solid" type="submit">Send enquiry</button></div>
+      <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+  <aside class="rv s2">
+    <div class="details">
+      <div><span class="label">Email</span><p><a href="mailto:hello@trustroutetechnologies.com">hello@trustroutetechnologies.com</a></p><small>We aim to reply within two business days.</small></div>
+      <div><span class="label">Telephone</span><p>[+00 000 000 0000]</p></div>
+      <div><span class="label">Office</span><p>21st Avenue<br>Burnaby, British Columbia, Canada</p></div>
+      <div><span class="label">Company</span><p>TrustRoute Technologies</p></div>
+    </div>
+  </aside>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div>
+      <a class="logo" href="index.html"><svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#A8833F" stroke-width=".9"/><g class="t" fill="none" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#A8833F"/></svg><span class="wm"><b>TRUSTROUTE</b><small>TECHNOLOGIES</small></span></a>
+      <p style="max-width:340px;margin-top:30px">Independent banking technology advisory and solutions for financial institutions worldwide.</p>
+    </div>
+    <div><h4>Advisory</h4><ul><li><a href="advisory.html#strategy">Digital Strategy</a></li><li><a href="advisory.html#switch">Switch Advisory</a></li><li><a href="advisory.html#flexcube">Oracle FLEXCUBE</a></li><li><a href="advisory.html#testing">Testing &amp; Certification</a></li><li><a href="advisory.html#implementation">Implementation</a></li></ul></div>
+    <div><h4>Solutions</h4><ul><li><a href="sms-banking.html">SMS Banking</a></li><li><a href="whatsapp-banking.html">WhatsApp Banking</a></li><li><a href="wallet-banking.html">Wallet Banking</a></li><li><a href="switch-simulators.html">Switch Simulators</a></li><li><a href="feip.html">FEIP</a></li><li><a href="meridian.html">Meridian</a></li></ul></div>
+    <div><h4>The Firm</h4><ul><li><a href="about.html">About</a></li><li><a href="insights.html">Insights</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+  </div>
+  <div class="legal"><span>© <span id="year">2026</span> TrustRoute Technologies</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
+</div></footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

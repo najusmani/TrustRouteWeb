@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 56" width="876" height="168" role="img" aria-label="TrustRoute Technologies, reversed">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&amp;family=Jost:wght@400&amp;display=swap');</style>
+  <path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#C9AE78" stroke-width=".9"/>
+  <path d="M28 7.5 L48.5 28 L28 48.5 L7.5 28 Z" fill="none" stroke="#C9AE78" stroke-width=".45" stroke-dasharray="1 2.4"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="square">
+    <path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/>
+  </g>
+  <path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#C9AE78"/>
+  <text x="72" y="31" font-family="'Cormorant Garamond', Garamond, Georgia, serif" font-size="24" font-weight="500" letter-spacing="5.2" fill="#FFFFFF">TRUSTROUTE</text>
+  <text x="73" y="45.5" font-family="Jost, 'Century Gothic', Futura, sans-serif" font-size="8" letter-spacing="5.15" fill="#C9AE78">TECHNOLOGIES</text>
+</svg>

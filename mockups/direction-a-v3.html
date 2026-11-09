@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustRoute Technologies · Banking Technology Advisory &amp; Solutions</title>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1F3F; --navy-deep:#091530; --ink:#1A2133; --stone:#7C7768; --mute:#5F6573;
+  --gold:#A8833F; --gold-soft:#C9AE78; --ivory:#F7F4EE; --white:#FFFFFF; --hair:#E5DFD3; --hair-d:rgba(201,174,120,.28);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.68,.12,1);
+  --img:"https://images.unsplash.com/photo-";
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--ink);font:300 17px/1.75 var(--sans);-webkit-font-smoothing:antialiased;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 48px}
+.cap{font:500 11px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase}
+.label{composes:cap;font:500 11px/1 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.005em}
+em{font-style:italic}
+
+/* ---------- LOGO ---------- */
+.logo{display:flex;align-items:center;gap:16px}
+.logo .wm{display:flex;flex-direction:column;gap:6px}
+.logo .wm b{font:500 21px/1 var(--serif);letter-spacing:.22em}
+.logo .wm small{font:400 8.5px/1 var(--sans);letter-spacing:.62em;opacity:.75}
+.logo svg .t{stroke:currentColor}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .6s var(--ease),color .6s var(--ease),box-shadow .6s}
+.nav .wrap{height:104px;display:flex;align-items:center;justify-content:space-between;transition:height .6s var(--ease)}
+.nav.scrolled{background:rgba(255,255,255,.97);color:var(--navy);box-shadow:0 1px 0 var(--hair)}
+.nav.scrolled .wrap{height:80px}
+.menu{display:flex;align-items:center;gap:42px}
+.menu a{font:400 13px var(--sans);letter-spacing:.16em;text-transform:uppercase;position:relative;padding:4px 0;opacity:.88;transition:opacity .3s}
+.menu a:after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:var(--gold-soft);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.menu a:hover{opacity:1}.menu a:hover:after{transform:scaleX(1);transform-origin:left}
+.menu .contact{border:1px solid currentColor;padding:12px 22px;opacity:1}
+.menu .contact:after{display:none}
+.menu .contact:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;height:100vh;min-height:720px;color:#fff;overflow:hidden;background:var(--navy-deep)}
+.hero .ph{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=2200&q=80&auto=format&fit=crop") center 30%/cover;transform:scale(1.12);animation:kb 22s var(--ease) forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,21,48,.94) 0%,rgba(9,21,48,.78) 38%,rgba(9,21,48,.35) 70%,rgba(9,21,48,.55) 100%),linear-gradient(0deg,rgba(9,21,48,.85),transparent 45%)}
+.hero .routes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .routes path{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 3.4s var(--ease) 1.2s forwards}
+.hero .routes .n{opacity:0;animation:fade 1s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+.hero .content{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:150px}
+.hero .label{color:var(--gold-soft);display:flex;align-items:center;gap:18px}
+.hero .label:before{content:"";width:42px;height:1px;background:var(--gold-soft)}
+.hero h1{font:400 clamp(54px,7.6vw,124px)/.98 var(--serif);margin:34px 0 36px;max-width:980px;letter-spacing:-.015em}
+.hero h1 em{color:var(--gold-soft)}
+.hero .row{display:flex;gap:64px;align-items:flex-end;flex-wrap:wrap}
+.hero p{max-width:470px;margin:0;font-size:18px;color:rgba(255,255,255,.78)}
+.tlink{display:inline-flex;align-items:center;gap:18px;font:500 12px var(--sans);letter-spacing:.24em;text-transform:uppercase;padding-bottom:10px;border-bottom:1px solid currentColor;transition:gap .5s var(--ease),color .3s}
+.tlink:hover{gap:28px}
+.tlink.gold{color:var(--gold-soft)}
+.hero-bar{position:absolute;left:0;right:0;bottom:0;z-index:2;border-top:1px solid rgba(255,255,255,.16)}
+.hero-bar .wrap{display:flex;justify-content:space-between;align-items:center;height:76px;font:400 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.hero-bar .caps{display:flex;gap:44px}
+.hero-bar .caps span:before{content:"·";margin-right:12px;color:var(--gold-soft)}
+.hero-bar .sc{display:flex;align-items:center;gap:14px}
+.hero-bar .sc i{width:1px;height:28px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.hero-bar .sc i:after{content:"";position:absolute;left:0;top:-100%;width:1px;height:100%;background:var(--gold-soft);animation:sc 2.4s var(--ease) infinite}
+@keyframes sc{to{top:100%}}
+
+/* load + reveal */
+.js .ld{opacity:0;transform:translateY(26px);animation:up 1.4s var(--ease) forwards}
+.js .d1{animation-delay:.3s}.js .d2{animation-delay:.5s}.js .d3{animation-delay:.75s}.js .d4{animation-delay:1s}
+@keyframes up{to{opacity:1;transform:none}}
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .s2{transition-delay:.15s}.js .s3{transition-delay:.3s}.js .s4{transition-delay:.45s}
+.js .reveal{clip-path:inset(100% 0 0 0);transition:clip-path 1.6s var(--ease)}
+.js .reveal.in{clip-path:inset(0 0 0 0)}
+.reveal img{transform:scale(1.15);transition:transform 2.4s var(--ease)}
+.reveal.in img{transform:scale(1)}
+
+/* ---------- SECTIONS ---------- */
+section{position:relative}
+.pad{padding:170px 0}
+.head{display:grid;grid-template-columns:4fr 8fr;gap:48px;margin-bottom:90px}
+.head .label{padding-top:18px}
+.head h2{font:400 clamp(40px,4.6vw,68px)/1.06 var(--serif);color:var(--navy)}
+.head h2 em{color:var(--gold)}
+.head p{color:var(--mute);margin:28px 0 0;max-width:560px}
+
+/* firm intro */
+.firm .grid{display:grid;grid-template-columns:4fr 8fr;gap:48px}
+.firm .label{padding-top:16px}
+.firm .big{font:400 clamp(30px,3.2vw,46px)/1.32 var(--serif);color:var(--navy);margin:0}
+.firm .big em{color:var(--gold)}
+.firm .pics{display:grid;grid-template-columns:7fr 5fr;gap:48px;margin-top:130px;align-items:end}
+.firm figure{margin:0}
+.firm figure .reveal{overflow:hidden}
+.firm .f1 img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.firm .f2{padding-bottom:40px}
+.firm .f2 p{color:var(--mute);margin:0 0 40px}
+.facts{border-top:1px solid var(--hair)}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--hair)}
+.facts b{font:500 11px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);padding-top:5px}
+.facts span{font:400 21px/1.35 var(--serif);color:var(--navy)}
+figcaption{font:400 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-top:16px}
+
+/* who we serve */
+.serve{background:var(--ivory)}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.cols4 article{border-top:1px solid var(--navy);padding-top:30px}
+.cols4 .num{font:italic 400 22px var(--serif);color:var(--gold)}
+.cols4 h3{font:400 30px/1.12 var(--serif);color:var(--navy);margin:20px 0 16px}
+.cols4 p{margin:0;color:var(--mute);font-size:16px}
+
+/* practices */
+.practice{display:grid;grid-template-columns:1fr 1fr;min-height:820px}
+.practice .img{position:relative;overflow:hidden}
+.practice .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.practice .img .tag{position:absolute;left:48px;bottom:44px;z-index:2;color:#fff;font:italic 400 120px/1 var(--serif);opacity:.9;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.practice .txt{padding:130px 110px 120px;display:flex;flex-direction:column;justify-content:center}
+.practice.alt .img{order:2}
+.practice.alt .txt{background:var(--navy);color:#fff}
+.practice h2{font:400 clamp(44px,4.4vw,66px)/1.02 var(--serif);color:var(--navy);margin:28px 0 22px}
+.practice.alt h2{color:#fff}
+.practice .txt>p{color:var(--mute);margin:0 0 50px;max-width:470px}
+.practice.alt .txt>p{color:rgba(255,255,255,.7)}
+.list{list-style:none;margin:0 0 54px;padding:0;border-top:1px solid var(--hair)}
+.practice.alt .list{border-color:rgba(255,255,255,.14)}
+.list li{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:22px 0;border-bottom:1px solid var(--hair);transition:padding .6s var(--ease)}
+.practice.alt .list li{border-color:rgba(255,255,255,.14)}
+.list li:hover{padding-left:14px}
+.list b{font:400 25px/1.2 var(--serif);color:var(--navy);transition:color .3s}
+.practice.alt .list b{color:#fff}
+.list li:hover b{color:var(--gold)}
+.practice.alt .list li:hover b{color:var(--gold-soft)}
+.list span{font:400 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--stone);text-align:right;white-space:nowrap}
+.practice.alt .list span{color:rgba(255,255,255,.5)}
+.practice.alt .tlink{color:var(--gold-soft)}
+.practice .tlink{color:var(--navy);align-self:flex-start}
+
+/* approach */
+.approach .stages{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hair);position:relative}
+.approach .stages:before{content:"";position:absolute;left:0;top:-1px;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 2.6s var(--ease)}
+.approach .stages.in:before{transform:scaleX(1)}
+.approach .st{padding:40px 40px 0 0}
+.approach .st+.st{padding-left:40px;border-left:1px solid var(--hair)}
+.approach .rn{font:italic 400 64px/1 var(--serif);color:var(--gold-soft)}
+.approach h3{font:400 34px var(--serif);color:var(--navy);margin:26px 0 12px}
+.approach p{margin:0;color:var(--mute);font-size:16px}
+
+/* principles */
+.principles{background:var(--ivory)}
+.pr{display:grid;grid-template-columns:4fr 8fr;gap:48px;padding:56px 0;border-top:1px solid var(--hair)}
+.pr:last-child{border-bottom:1px solid var(--hair)}
+.pr .k{font:italic 400 20px var(--serif);color:var(--gold);padding-top:14px}
+.pr h3{font:400 clamp(34px,3.4vw,50px)/1.1 var(--serif);color:var(--navy);margin-bottom:14px}
+.pr p{margin:0;color:var(--mute);max-width:620px}
+
+/* founder */
+.founder .grid{display:grid;grid-template-columns:5fr 7fr;gap:120px;align-items:center}
+.portrait{aspect-ratio:4/5;background:var(--ivory);border:1px solid var(--hair);display:flex;align-items:center;justify-content:center;position:relative}
+.portrait:after{content:"";position:absolute;inset:18px;border:1px solid var(--hair)}
+.portrait span{font:400 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--stone)}
+.founder blockquote{margin:0}
+.founder blockquote p{font:italic 400 clamp(34px,3.8vw,56px)/1.18 var(--serif);color:var(--navy);margin:34px 0 44px}
+.founder .by b{display:block;font:500 13px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--navy)}
+.founder .by span{font-size:15px;color:var(--mute)}
+
+/* insights */
+.insights{border-top:1px solid var(--hair)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.card .im{overflow:hidden;margin-bottom:30px}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%;transition:transform 1.6s var(--ease)}
+.card:hover img{transform:scale(1.05)}
+.card .cap{color:var(--gold)}
+.card h3{font:400 29px/1.2 var(--serif);color:var(--navy);margin:16px 0 22px;transition:color .3s}
+.card:hover h3{color:var(--gold)}
+.card .more{font:400 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--stone)}
+
+/* CTA */
+.cta{position:relative;color:#fff;text-align:center;overflow:hidden;padding:200px 0}
+.cta .ph{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=2200&q=80&auto=format&fit=crop") center/cover}
+.cta .veil{position:absolute;inset:0;background:rgba(9,21,48,.82)}
+.cta .wrap{position:relative}
+.cta .label{color:var(--gold-soft)}
+.cta h2{font:400 clamp(46px,6vw,96px)/1.02 var(--serif);margin:32px auto 30px;max-width:1000px}
+.cta h2 em{color:var(--gold-soft)}
+.cta p{max-width:520px;margin:0 auto 56px;color:rgba(255,255,255,.75)}
+.btn{display:inline-block;font:500 12px var(--sans);letter-spacing:.26em;text-transform:uppercase;padding:20px 40px;border:1px solid var(--gold-soft);color:#fff;transition:background .5s var(--ease),color .5s}
+.btn:hover{background:var(--gold-soft);color:var(--navy-deep)}
+.cta .mail{margin-top:44px;font:400 13px var(--sans);letter-spacing:.14em;color:rgba(255,255,255,.6)}
+.cta .mail a{color:#fff;border-bottom:1px solid var(--hair-d);padding-bottom:3px}
+
+/* footer */
+footer{background:var(--white);color:var(--mute);font-size:15px;padding:110px 0 40px}
+.fg{display:grid;grid-template-columns:5fr 2fr 2fr 2fr;gap:48px;padding-bottom:90px}
+footer .logo{color:var(--navy)}
+footer h4{font:500 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--navy);margin:0 0 26px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin:12px 0}footer li a:hover{color:var(--gold)}
+.legal{border-top:1px solid var(--hair);padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:400 11px var(--sans);letter-spacing:.2em;text-transform:uppercase}
+.credit{font-size:11px;color:#A7A398;margin-top:18px;letter-spacing:.04em}
+
+/* mock switcher */
+.switch{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:rgba(17,17,17,.92);color:#fff;border-radius:99px;padding:5px;display:flex;gap:2px;font:500 12px system-ui,sans-serif;z-index:60;box-shadow:0 8px 24px rgba(0,0,0,.3);letter-spacing:0}
+.switch a{padding:7px 13px;border-radius:99px;white-space:nowrap}.switch a.on{background:#fff;color:#111}
+
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.js .ld,.js .rv{opacity:1;transform:none}.js .reveal{clip-path:none}.hero .ph{transform:none}.hero .routes path{stroke-dashoffset:0}.hero .routes .n{opacity:1}}
+
+@media (max-width:1100px){
+  .wrap{padding:0 32px}
+  .menu a:not(.contact){display:none}
+  .head,.firm .grid,.pr,.founder .grid{grid-template-columns:1fr;gap:24px}
+  .firm .pics{grid-template-columns:1fr;margin-top:80px}
+  .cols4{grid-template-columns:1fr 1fr;row-gap:56px}
+  .practice{grid-template-columns:1fr;min-height:0}
+  .practice .img{min-height:440px}
+  .practice.alt .img{order:0}
+  .practice .txt{padding:90px 32px}
+  .approach .stages{grid-template-columns:1fr 1fr}
+  .approach .st,.approach .st+.st{padding:40px 24px 40px 0;border-left:0}
+  .approach .st:nth-child(even){padding-left:24px;border-left:1px solid var(--hair)}
+  .cards{grid-template-columns:1fr 1fr}
+  .founder .grid{gap:56px}
+  .portrait{max-width:420px}
+  .fg{grid-template-columns:1fr 1fr}
+  .hero-bar .caps{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .pad{padding:110px 0}
+  .nav .wrap{height:84px}
+  .logo .wm b{font-size:17px;letter-spacing:.16em}
+  .logo svg{width:38px;height:38px}
+  .menu .contact{padding:10px 14px;font-size:11px}
+  .hero{min-height:640px}
+  .hero .content{padding-bottom:120px}
+  .hero h1{font-size:52px;margin:24px 0 28px}
+  .hero .label{font-size:9.5px;letter-spacing:.2em;gap:12px}
+  .hero .label:before{width:24px}
+  .hero .row{gap:32px}
+  .cols4,.cards,.approach .stages{grid-template-columns:1fr}
+  .approach .st:nth-child(even){padding-left:0;border-left:0}
+  .practice .txt{padding:72px 16px}
+  .practice .img{min-height:320px}
+  .practice .img .tag{font-size:80px;left:16px}
+  .list li{flex-direction:column;gap:6px}
+  .list span{text-align:left;white-space:normal}
+  .facts div{grid-template-columns:1fr;gap:6px}
+  .fg{grid-template-columns:1fr}
+  .cta{padding:130px 0}
+  .switch{font-size:11px}.switch a{padding:7px 9px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="#" aria-label="TrustRoute Technologies, home">
+    <svg width="46" height="46" viewBox="0 0 56 56" aria-hidden="true">
+      <path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#C9AE78" stroke-width=".9"/>
+      <path d="M28 7.5 L48.5 28 L28 48.5 L7.5 28 Z" fill="none" stroke="#C9AE78" stroke-width=".45" stroke-dasharray="1 2.4"/>
+      <g class="t" fill="none" stroke-linecap="square">
+        <path d="M17.5 20.5 H38.5" stroke-width="2.2"/>
+        <path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/>
+        <path d="M28 20.5 V36.5" stroke-width="2.2"/>
+      </g>
+      <path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#C9AE78"/>
+    </svg>
+    <span class="wm"><b>TRUSTROUTE</b><small>TECHNOLOGIES</small></span>
+  </a>
+  <nav class="menu" aria-label="Primary"><a href="#firm">The Firm</a><a href="#advisory">Advisory</a><a href="#solutions">Solutions</a><a href="#insights">Insights</a><a class="contact" href="#contact">Contact</a></nav>
+</div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="ph" role="img" aria-label="Glass towers seen from below"></div>
+  <div class="veil"></div>
+  <svg class="routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M820 760 C 930 610, 1010 520, 1090 360 S 1250 170, 1330 120" fill="none" stroke="#C9AE78" stroke-width="1" stroke-opacity=".75"/>
+    <path d="M1090 360 C 1150 420, 1220 450, 1440 470" fill="none" stroke="#C9AE78" stroke-width=".7" stroke-opacity=".45" style="animation-delay:2s"/>
+    <g fill="#C9AE78"><circle class="n" cx="1090" cy="360" r="4" style="animation-delay:2.4s"/><circle class="n" cx="1330" cy="120" r="3" style="animation-delay:3.4s"/></g>
+    <circle class="n" cx="1090" cy="360" r="12" fill="none" stroke="#C9AE78" stroke-opacity=".5" style="animation-delay:2.6s"/>
+  </svg>
+  <div class="wrap content">
+    <div class="label ld d1">Banking Technology Advisory &amp; Solutions</div>
+    <h1 class="ld d2">Trusted counsel for the <em>future of banking.</em></h1>
+    <div class="row ld d3">
+      <p>We advise banks and financial institutions worldwide, and deliver the digital channels and payment systems their customers depend on.</p>
+      <a class="tlink gold" href="#contact">Arrange a consultation <span>→</span></a>
+    </div>
+  </div>
+  <div class="hero-bar ld d4"><div class="wrap">
+    <div class="caps"><span>Advisory</span><span>Digital Channels</span><span>Payments</span><span>Assurance</span></div>
+    <div class="sc"><i></i>Scroll</div>
+  </div></div>
+</section>
+
+<!-- THE FIRM -->
+<section class="firm pad" id="firm"><div class="wrap">
+  <div class="grid">
+    <div class="label rv">The Firm</div>
+    <p class="big rv s2">TrustRoute Technologies is an independent banking technology firm. We help institutions choose, build and certify the systems that move money, so that <em>every transaction travels a route their customers can trust.</em></p>
+  </div>
+  <div class="pics">
+    <figure class="f1 rv"><div class="reveal"><img src="https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?w=1600&q=80&auto=format&fit=crop" alt="Classical bank building with stone columns" loading="lazy"></div><figcaption>Built on the principles of banking</figcaption></figure>
+    <div class="f2">
+      <p class="rv s2">Founded by practitioners who have built and run the systems they now advise on, we bring discretion, depth and accountability to every engagement.</p>
+      <div class="facts rv s3">
+        <div><b>Independent</b><span>Advice shaped by your interests alone</span></div>
+        <div><b>Practitioner-led</b><span>Hands-on in switching, cards &amp; channels</span></div>
+        <div><b>Accountable</b><span>One partner, strategy to go-live</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- WHO WE SERVE -->
+<section class="serve pad"><div class="wrap">
+  <div class="head"><div class="label rv">Who We Serve</div><div><h2 class="rv s2">Partners to the institutions <em>that move money.</em></h2></div></div>
+  <div class="cols4">
+    <article class="rv"><span class="num">i.</span><h3>Commercial Banks</h3><p>Digital channel strategy, switch modernisation and vendor selection.</p></article>
+    <article class="rv s2"><span class="num">ii.</span><h3>Microfinance &amp; Digital Banks</h3><p>Affordable mobile and SMS banking that reaches every customer.</p></article>
+    <article class="rv s3"><span class="num">iii.</span><h3>Fintechs &amp; Payment Providers</h3><p>Bank-grade integration, wallets and payment connectivity.</p></article>
+    <article class="rv s4"><span class="num">iv.</span><h3>Switches &amp; Processors</h3><p>Simulation, testing and certification of payment flows.</p></article>
+  </div>
+</div></section>
+
+<!-- ADVISORY -->
+<section class="practice" id="advisory">
+  <div class="img reveal"><img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=1600&q=80&auto=format&fit=crop" alt="Curved glass facade of a modern building" loading="lazy"><span class="tag">i</span></div>
+  <div class="txt">
+    <div class="label rv">Advisory</div>
+    <h2 class="rv s2">Counsel for decisions <em>that matter most.</em></h2>
+    <p class="rv s2">Senior, independent expertise for banking leaders shaping their digital and payments future.</p>
+    <ul class="list rv s3">
+      <li><b>Digital Banking Strategy</b><span>Roadmaps · Business cases</span></li>
+      <li><b>Core Banking &amp; Switch Advisory</b><span>Selection · Architecture</span></li>
+      <li><b>Payments Testing &amp; Certification</b><span>Scheme readiness</span></li>
+      <li><b>Implementation Oversight</b><span>Programme · Vendors</span></li>
+    </ul>
+    <a class="tlink rv s4" href="#">Our advisory practice <span>→</span></a>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="practice alt" id="solutions">
+  <div class="img reveal"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1600&q=80&auto=format&fit=crop" alt="Customer paying with a mobile phone" loading="lazy"><span class="tag">ii</span></div>
+  <div class="txt">
+    <div class="label rv" style="color:var(--gold-soft)">Solutions</div>
+    <h2 class="rv s2">Proven solutions, <em>ready to deploy.</em></h2>
+    <p class="rv s2">Banking products that extend your reach to every customer, on any device and any network.</p>
+    <ul class="list rv s3">
+      <li><b>SMS Banking</b><span>Balances · Alerts · Transfers</span></li>
+      <li><b>Wallet Banking</b><span>Wallets · P2P · Merchant</span></li>
+      <li><b>Switch Test Simulators</b><span>ATM · POS · Host</span></li>
+      <li><b>In Development</b><span>Fraud · Reconciliation · APIs</span></li>
+    </ul>
+    <a class="tlink rv s4" href="#">Explore our solutions <span>→</span></a>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach pad"><div class="wrap">
+  <div class="head"><div class="label rv">Our Approach</div><div><h2 class="rv s2">A disciplined route <em>from idea to go-live.</em></h2><p class="rv s3">Four stages, each with clear outcomes, so leadership always knows where the programme stands.</p></div></div>
+  <div class="stages rv" id="stages">
+    <div class="st"><span class="rn">I</span><h3>Assess</h3><p>Understand your landscape, constraints and ambitions.</p></div>
+    <div class="st"><span class="rn">II</span><h3>Design</h3><p>Shape the target architecture and the plan to reach it.</p></div>
+    <div class="st"><span class="rn">III</span><h3>Deliver</h3><p>Implement, integrate and manage vendors to schedule.</p></div>
+    <div class="st"><span class="rn">IV</span><h3>Certify</h3><p>Test every route end to end, then go live with confidence.</p></div>
+  </div>
+</div></section>
+
+<!-- PRINCIPLES -->
+<section class="principles pad"><div class="wrap">
+  <div class="head"><div class="label rv">Why TrustRoute</div><div><h2 class="rv s2">Trust is earned <em>in the details.</em></h2></div></div>
+  <div class="pr rv"><span class="k">First</span><div><h3>Deep payments expertise</h3><p>Experience across switching, cards, mobile channels and settlement, gained from inside the systems themselves.</p></div></div>
+  <div class="pr rv"><span class="k">Second</span><div><h3>Independent by design</h3><p>We hold no vendor allegiances. Every recommendation is made in your interest alone.</p></div></div>
+  <div class="pr rv"><span class="k">Third</span><div><h3>Security from the first conversation</h3><p>Controls, compliance and resilience are considered from day one, never retrofitted.</p></div></div>
+  <div class="pr rv"><span class="k">Fourth</span><div><h3>One accountable partner</h3><p>From strategy through certification and go-live, you work with one firm that owns the outcome.</p></div></div>
+</div></section>
+
+<!-- FOUNDER -->
+<section class="founder pad"><div class="wrap grid">
+  <div class="portrait rv"><span>Founder portrait</span></div>
+  <blockquote class="rv s2">
+    <div class="label">From Our Founder</div>
+    <p>“Every bank deserves technology it can trust, and a partner who understands what is at stake.”</p>
+    <div class="by"><b>Najeebullah Usmani</b><span>Founder &amp; Principal Consultant</span></div>
+  </blockquote>
+</div></section>
+
+<!-- INSIGHTS -->
+<section class="insights pad" id="insights"><div class="wrap">
+  <div class="head"><div class="label rv">Insights</div><div><h2 class="rv s2">Perspectives on <em>banking technology.</em></h2></div></div>
+  <div class="cards">
+    <a class="card rv" href="#"><div class="im"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1000&q=80&auto=format&fit=crop" alt="City skyline at dusk" loading="lazy"></div><span class="cap">Payments</span><h3>ISO 20022 migration: what banks should be planning for now</h3><span class="more">Read the article →</span></a>
+    <a class="card rv s2" href="#"><div class="im"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=80&auto=format&fit=crop" alt="Advisors in a meeting" loading="lazy"></div><span class="cap">Channels</span><h3>Why SMS banking still reaches customers that apps cannot</h3><span class="more">Read the article →</span></a>
+    <a class="card rv s3" href="#"><div class="im"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80&auto=format&fit=crop" alt="Analytics dashboard on a screen" loading="lazy"></div><span class="cap">Assurance</span><h3>Simulating the switch: certify before you go live</h3><span class="more">Read the article →</span></a>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="ph" role="img" aria-label="A city at night seen from above"></div>
+  <div class="veil"></div>
+  <div class="wrap">
+    <div class="label rv">Begin the Conversation</div>
+    <h2 class="rv s2">Planning a digital banking or <em>payments initiative?</em></h2>
+    <p class="rv s3">Tell us where you are today. We will help you chart the route forward, in confidence.</p>
+    <a class="btn rv s4" href="#">Arrange a consultation</a>
+    <div class="mail rv s4">or write to <a href="#">hello@trustroutetechnologies.com</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="fg">
+    <div>
+      <a class="logo" href="#"><svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 2 L54 28 L28 54 L2 28 Z" fill="none" stroke="#A8833F" stroke-width=".9"/><g class="t" fill="none" stroke-linecap="square"><path d="M17.5 20.5 H38.5" stroke-width="2.2"/><path d="M17.5 20.5 V24 M38.5 20.5 V24" stroke-width="1.1"/><path d="M28 20.5 V36.5" stroke-width="2.2"/></g><path d="M28 39.5 L30.6 42.1 L28 44.7 L25.4 42.1 Z" fill="#A8833F"/></svg><span class="wm"><b>TRUSTROUTE</b><small>TECHNOLOGIES</small></span></a>
+      <p style="max-width:340px;margin-top:30px">Independent banking technology advisory and solutions for financial institutions worldwide.</p>
+    </div>
+    <div><h4>Advisory</h4><ul><li><a href="#">Digital Strategy</a></li><li><a href="#">Switch Advisory</a></li><li><a href="#">Testing &amp; Certification</a></li><li><a href="#">Implementation</a></li></ul></div>
+    <div><h4>Solutions</h4><ul><li><a href="#">SMS Banking</a></li><li><a href="#">Wallet Banking</a></li><li><a href="#">Switch Simulators</a></li></ul></div>
+    <div><h4>The Firm</h4><ul><li><a href="#">About</a></li><li><a href="#">Insights</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 TrustRoute Technologies</span><span>Privacy · Terms · Security</span></div>
+  <div class="credit">Mockup photography: Unsplash</div>
+</div></footer>
+
+<div class="switch"><a href="direction-a-v2.html">A v2</a><a class="on" href="direction-a-v3.html">A v3 · Private bank</a><a href="direction-b-modern-fintech.html">B</a><a href="direction-c-network.html">C</a></div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>60)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var pending=[].slice.call(document.querySelectorAll('.rv,.reveal')),ticking=false;
+  function check(){
+    ticking=false;
+    var limit=window.innerHeight*0.9;
+    pending=pending.filter(function(e){
+      if(e.getBoundingClientRect().top<limit){e.classList.add('in');return false}
+      return true;
+    });
+  }
+  function req(){if(!ticking){ticking=true;requestAnimationFrame(check)}}
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',req);
+  window.addEventListener('load',check);
+  check();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustRoute · Direction C · Network</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060B18;--s1:#0B1426;--s2:#101C34;--line:#1C2A47;--cyan:#22D3EE;--violet:#8B5CF6;--lime:#A3E635;--text:#E6EDF8;--muted:#8A9BBA}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Space Grotesk",system-ui,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.03em}
+.mono{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.08em;color:var(--cyan);text-transform:uppercase}
+.mono:before{content:"// "}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
+.brand span{color:var(--cyan)}
+.links{display:flex;gap:28px;font-size:15px;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:8px;font-weight:600;font-size:15px}
+.btn.c{background:var(--cyan);color:#03222A;box-shadow:0 0 0 1px var(--cyan),0 8px 30px -6px rgba(34,211,238,.55)}
+.btn.o{border:1px solid var(--line);background:var(--s1)}
+.hero{position:relative;overflow:hidden;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;background-position:-1px -1px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(800px 420px at 70% 40%,rgba(139,92,246,.18),transparent 70%),linear-gradient(180deg,rgba(6,11,24,.4),var(--bg) 92%)}
+.hgrid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:88px 0 110px}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:1;margin:18px 0 24px}
+.hero h1 span{background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:19px;color:var(--muted);max-width:520px;margin:0 0 34px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.term{margin-top:40px;font:13px/1.7 "JetBrains Mono",monospace;color:var(--muted);border-left:2px solid var(--violet);padding-left:14px}
+.term b{color:var(--lime);font-weight:500}
+.net{width:100%;height:auto}
+.route{stroke-dasharray:6 10;animation:flow 1.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-32}}
+.pulse{animation:p 2.4s ease-in-out infinite}
+@keyframes p{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.route,.pulse{animation:none}}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--s1)}
+.ticker .wrap{display:flex;gap:40px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px;font:13px "JetBrains Mono",monospace;color:var(--muted)}
+.ticker i{font-style:normal;color:var(--cyan)}
+section{padding:100px 0}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.sh h2{font-size:clamp(32px,4.2vw,52px);line-height:1.05;margin-top:12px;max-width:640px}
+.sh p{color:var(--muted);max-width:420px;margin:0}
+.aud{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.aud div{background:var(--s1);padding:30px 26px;transition:background .2s}
+.aud div:hover{background:var(--s2)}
+.aud code{font:12px "JetBrains Mono",monospace;color:var(--violet)}
+.aud h3{font-size:20px;margin:14px 0 8px}
+.aud p{margin:0;color:var(--muted);font-size:15px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.panel{position:relative;background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:38px;overflow:hidden}
+.panel:before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent)}
+.panel.v:before{background:linear-gradient(90deg,var(--violet),transparent)}
+.panel h3{font-size:30px;margin:12px 0 10px}
+.panel>p{color:var(--muted);margin:0 0 24px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-top:1px solid var(--line)}
+.row b{font-weight:600}
+.row span{font:12px "JetBrains Mono",monospace;color:var(--muted);text-align:right}
+.panel .btn{margin-top:22px}
+.v .mono{color:var(--violet)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{border:1px solid var(--line);border-radius:14px;padding:26px;background:linear-gradient(180deg,var(--s1),transparent)}
+.step code{font:12px "JetBrains Mono",monospace;color:var(--cyan)}
+.step h3{font-size:22px;margin:16px 0 8px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.why div{padding:28px 24px;border-radius:14px;background:var(--s1);border:1px solid var(--line)}
+.why .ic{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(34,211,238,.1);color:var(--cyan);font:600 16px "JetBrains Mono";margin-bottom:18px}
+.why h3{font-size:19px;margin-bottom:8px}
+.why p{margin:0;color:var(--muted);font-size:15px}
+.founder{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:center}
+.ph{aspect-ratio:1;border-radius:18px;background:linear-gradient(135deg,#13234A,#2A1E55);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font:12px "JetBrains Mono"}
+.founder q{display:block;font-size:clamp(24px,2.8vw,34px);line-height:1.25;font-weight:500;margin:14px 0 20px;quotes:none}
+.founder small{color:var(--muted)}
+.ctab{position:relative;border-radius:22px;padding:64px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(600px 300px at 100% 0,rgba(34,211,238,.18),transparent 70%),radial-gradient(600px 300px at 0 100%,rgba(139,92,246,.22),transparent 70%),var(--s1);display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.ctab h2{font-size:clamp(28px,3.6vw,44px);line-height:1.1;max-width:620px}
+footer{border-top:1px solid var(--line);padding:56px 0 32px;color:var(--muted);font-size:14px}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer h4{color:var(--text);font:500 12px "JetBrains Mono";letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:8px 0}
+.legal{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:"JetBrains Mono";font-size:12px}
+.switch{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#fff;color:#111;border-radius:99px;padding:6px;display:flex;gap:4px;font:600 13px system-ui;z-index:9;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.switch a{padding:8px 14px;border-radius:99px}.switch a.on{background:#111;color:#fff}
+@media (max-width:960px){
+  .links{display:none}
+  .hgrid,.duo,.founder{grid-template-columns:1fr}
+  .aud,.steps,.why{grid-template-columns:1fr 1fr}
+  .fg{grid-template-columns:1fr 1fr}
+  .ph{max-width:260px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .aud,.steps,.why{grid-template-columns:1fr}
+  .panel,.ctab{padding:28px 20px}
+  nav .btn{display:none}
+  .hgrid{padding:56px 0 72px}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+<div class="wrap" style="position:relative">
+<nav>
+  <a class="brand" href="#">
+    <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs><rect x="2" y="2" width="60" height="60" rx="14" fill="#0B1426" stroke="url(#g)" stroke-width="2.5"/><path d="M15 22 H49 M32 22 V46" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/><circle cx="15" cy="22" r="5" fill="#22D3EE"/><circle cx="49" cy="22" r="5" fill="#8B5CF6"/><circle cx="32" cy="46" r="6" fill="#A3E635"/></svg>
+    <em style="font-style:normal">Trust<span>Route</span></em>
+  </a>
+  <div class="links"><a href="#">Services</a><a href="#">Solutions</a><a href="#">About</a><a href="#">Insights</a><a href="#">Contact</a></div>
+  <a class="btn c" href="#">Talk to an engineer</a>
+</nav>
+</div>
+<div class="wrap">
+<div class="hgrid">
+  <div>
+    <div class="mono">Banking technology consultancy &amp; solutions</div>
+    <h1>Every transaction, on a <span>trusted route.</span></h1>
+    <p>We design, build and certify the systems that carry money between customers, switches and banks, with consultancy and solutions built by payments engineers.</p>
+    <div class="cta"><a class="btn c" href="#">Start a conversation →</a><a class="btn o" href="#">Explore solutions</a></div>
+    <div class="term">&gt; route.trace("wallet → switch → core")<br><b>✓ 0210 approved · DE39=00 · 164ms</b></div>
+  </div>
+  <svg class="net" viewBox="0 0 520 440" role="img" aria-label="Network of channels, switch and banks connected by routes">
+    <defs>
+      <linearGradient id="rl" x1="0" x2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#22D3EE" stop-opacity=".5"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g stroke="#1C2A47" stroke-width="1.5" fill="none">
+      <path d="M80 90 L260 220"/><path d="M80 220 L260 220"/><path d="M80 350 L260 220"/>
+      <path d="M260 220 L440 120"/><path d="M260 220 L440 220"/><path d="M260 220 L440 320"/>
+    </g>
+    <g stroke="url(#rl)" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path class="route" d="M80 90 L260 220"/><path class="route" d="M260 220 L440 220" style="animation-delay:-.5s"/><path class="route" d="M80 350 L260 220" style="animation-delay:-.9s"/><path class="route" d="M260 220 L440 120" style="animation-delay:-.3s"/>
+    </g>
+    <circle cx="260" cy="220" r="90" fill="url(#glow)" class="pulse"/>
+    <g font-family="JetBrains Mono,monospace" font-size="11" fill="#8A9BBA">
+      <g><rect x="22" y="66" width="116" height="48" rx="10" fill="#0B1426" stroke="#1C2A47"/><text x="40" y="95" fill="#E6EDF8">◉ SMS / USSD</text></g>
+      <g><rect x="22" y="196" width="116" height="48" rx="10" fill="#0B1426" stroke="#1C2A47"/><text x="40" y="225" fill="#E6EDF8">◉ Mobile wallet</text></g>
+      <g><rect x="22" y="326" width="116" height="48" rx="10" fill="#0B1426" stroke="#1C2A47"/><text x="40" y="355" fill="#E6EDF8">◉ ATM / POS</text></g>
+      <g><rect x="200" y="186" width="120" height="68" rx="14" fill="#101C34" stroke="#22D3EE"/><text x="260" y="216" text-anchor="middle" fill="#22D3EE" font-size="12">SWITCH</text><text x="260" y="236" text-anchor="middle">ISO 8583</text></g>
+      <g><rect x="384" y="96" width="112" height="48" rx="10" fill="#0B1426" stroke="#1C2A47"/><text x="400" y="125" fill="#E6EDF8">▣ Issuer bank</text></g>
+      <g><rect x="384" y="196" width="112" height="48" rx="10" fill="#0B1426" stroke="#8B5CF6"/><text x="400" y="225" fill="#E6EDF8">▣ Core banking</text></g>
+      <g><rect x="384" y="296" width="112" height="48" rx="10" fill="#0B1426" stroke="#1C2A47"/><text x="400" y="325" fill="#E6EDF8">▣ Card scheme</text></g>
+    </g>
+  </svg>
+</div>
+</div>
+</div>
+
+<div class="ticker"><div class="wrap"><span><i>ISO 8583</i> card &amp; switch messaging</span><span><i>ISO 20022</i> payments</span><span><i>EMV</i> chip &amp; contactless</span><span><i>USSD / SMS</i> channels</span><span><i>HSM</i> &amp; key management</span></div></div>
+
+<section><div class="wrap">
+  <div class="sh"><div><div class="mono">Who we serve</div><h2>For the institutions that keep money moving.</h2></div><p>Wherever transactions flow, we help make them faster, safer and easier to launch.</p></div>
+  <div class="aud">
+    <div><code>01</code><h3>Commercial banks</h3><p>Channel strategy, switch modernisation, vendor selection.</p></div>
+    <div><code>02</code><h3>Microfinance &amp; digital banks</h3><p>Mobile and SMS banking that reaches every customer.</p></div>
+    <div><code>03</code><h3>Fintechs &amp; PSPs</h3><p>Bank-grade integration, wallets and connectivity.</p></div>
+    <div><code>04</code><h3>Switches &amp; processors</h3><p>Simulation, testing and certification of payment flows.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><div><div class="mono">What we do</div><h2>Consultancy and solutions, engineered together.</h2></div><p>Advice from people who've built it, and products ready to deploy.</p></div>
+  <div class="duo">
+    <div class="panel">
+      <div class="mono">Consultancy</div><h3>Advisory services</h3>
+      <p>Senior, hands-on expertise for critical banking technology decisions.</p>
+      <div class="row"><b>Digital banking strategy</b><span>roadmaps · business cases</span></div>
+      <div class="row"><b>Core &amp; switch advisory</b><span>selection · architecture</span></div>
+      <div class="row"><b>Testing &amp; certification</b><span>scheme · network readiness</span></div>
+      <div class="row"><b>Implementation</b><span>programme · vendor mgmt</span></div>
+      <a class="btn o" href="#">View services →</a>
+    </div>
+    <div class="panel v">
+      <div class="mono">Solutions</div><h3>Banking solutions</h3>
+      <p>Deployable products that extend your reach to every customer.</p>
+      <div class="row"><b>SMS Banking</b><span>balance · alerts · transfers</span></div>
+      <div class="row"><b>Wallet Banking</b><span>wallets · P2P · merchant</span></div>
+      <div class="row"><b>Switch Test Simulators</b><span>ATM · POS · host</span></div>
+      <div class="row"><b>In development</b><span>fraud · recon · APIs</span></div>
+      <a class="btn c" href="#">Explore solutions →</a>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><div><div class="mono">How we work</div><h2>Idea → architecture → live.</h2></div></div>
+  <div class="steps">
+    <div class="step"><code>step_01</code><h3>Assess</h3><p>Map your landscape, constraints and goals.</p></div>
+    <div class="step"><code>step_02</code><h3>Design</h3><p>Define the target architecture and delivery plan.</p></div>
+    <div class="step"><code>step_03</code><h3>Deliver</h3><p>Implement, integrate and manage vendors.</p></div>
+    <div class="step"><code>step_04</code><h3>Certify</h3><p>Test every route end to end, then go live.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><div><div class="mono">Why TrustRoute</div><h2>Built by payments engineers.</h2></div></div>
+  <div class="why">
+    <div><div class="ic">{ }</div><h3>Deep payments expertise</h3><p>Switching, cards, mobile channels and settlement.</p></div>
+    <div><div class="ic">≠</div><h3>Independent advice</h3><p>Shaped by your interests, never a vendor's.</p></div>
+    <div><div class="ic">◇</div><h3>Security by design</h3><p>Controls and compliance from day one.</p></div>
+    <div><div class="ic">→</div><h3>End-to-end ownership</h3><p>One accountable partner, strategy to go-live.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap founder">
+  <div class="ph">[ founder photo ]</div>
+  <div><div class="mono">From the founder</div><q>"Every bank deserves technology it can trust, and a partner who understands what's at stake."</q><b>Najeebullah Usmani</b><br><small>Founder &amp; Principal Consultant</small></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="ctab"><h2>Planning a digital banking or payments initiative?</h2><div class="cta"><a class="btn c" href="#">Start a conversation</a><a class="btn o" href="#">Request a demo</a></div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fg">
+    <div><div class="brand"><em style="font-style:normal">Trust<span>Route</span></em></div><p style="max-width:300px">Banking technology consultancy and solutions for institutions worldwide.</p></div>
+    <div><h4>Services</h4><ul><li>Strategy</li><li>Advisory</li><li>Testing</li><li>Implementation</li></ul></div>
+    <div><h4>Solutions</h4><ul><li>SMS Banking</li><li>Wallet Banking</li><li>Switch Simulators</li></ul></div>
+    <div><h4>Company</h4><ul><li>About</li><li>Insights</li><li>Careers</li><li>Contact</li></ul></div>
+  </div>
+  <div class="legal"><span>© 2026 TrustRoute Technologies</span><span>privacy · terms</span></div>
+</div></footer>
+
+<div class="switch"><a href="direction-a-institutional.html">A · Institutional</a><a href="direction-b-modern-fintech.html">B · Fintech</a><a class="on" href="direction-c-network.html">C · Network</a></div>
+</body>
+</html>
