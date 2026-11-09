@@ -2,7 +2,7 @@
 
 // Calendly booking link for "Book a call" buttons, e.g. 'https://calendly.com/your-name/intro-call'.
 // While empty, those buttons simply go to the Contact page.
-var CALENDLY_URL = '';
+var CALENDLY_URL = 'https://calendly.com/najusmani/30min';
 
 (function () {
   // Booking popup: Calendly's script and styles load only when a visitor clicks a booking link.
