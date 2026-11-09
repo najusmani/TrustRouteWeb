@@ -1,4 +1,41 @@
 /* TrustRoute Technologies · site behaviour */
+
+// Calendly booking link for "Book a call" buttons, e.g. 'https://calendly.com/your-name/intro-call'.
+// While empty, those buttons simply go to the Contact page.
+var CALENDLY_URL = '';
+
+(function () {
+  // Booking popup: Calendly's script and styles load only when a visitor clicks a booking link.
+  var calendlyLoading = null;
+  function loadCalendly() {
+    if (window.Calendly) return Promise.resolve();
+    if (calendlyLoading) return calendlyLoading;
+    calendlyLoading = new Promise(function (resolve, reject) {
+      var css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = 'https://assets.calendly.com/assets/external/widget.css';
+      document.head.appendChild(css);
+      var js = document.createElement('script');
+      js.src = 'https://assets.calendly.com/assets/external/widget.js';
+      js.async = true;
+      js.onload = function () { resolve(); };
+      js.onerror = function () { calendlyLoading = null; reject(); };
+      document.head.appendChild(js);
+    });
+    return calendlyLoading;
+  }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('[data-calendly]');
+    if (!link || !CALENDLY_URL) return; // no link configured: follow the normal href
+    e.preventDefault();
+    var url = CALENDLY_URL + (CALENDLY_URL.indexOf('?') === -1 ? '?' : '&') +
+      'hide_gdpr_banner=1&primary_color=a8833f&text_color=1a2133&background_color=ffffff';
+    loadCalendly()
+      .then(function () { window.Calendly.initPopupWidget({ url: url }); })
+      .catch(function () { window.open(CALENDLY_URL, '_blank', 'noopener'); });
+  });
+})();
+
 (function () {
   var nav = document.getElementById('nav');
   var burger = document.querySelector('.burger');

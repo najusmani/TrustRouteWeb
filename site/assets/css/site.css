@@ -421,3 +421,7 @@ footer li{margin:12px 0}footer li a:hover{color:var(--gold)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form-status.err{border-left-color:#B4483C;color:#7A2E25;background:#FBF1EF}
 .form button[disabled]{opacity:.6;cursor:wait}
+
+/* booking links (Calendly) */
+.cta .book{margin-top:34px}
+.details .talk{padding-bottom:36px}
