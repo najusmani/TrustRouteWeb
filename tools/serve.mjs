@@ -14,9 +14,11 @@ const types = {
 
 async function resolve(urlPath) {
   const clean = normalize(decodeURIComponent(urlPath.split('?')[0])).replace(/^(\.\.[/\\])+/, '');
-  const candidates = clean.endsWith('/') || clean.endsWith('\\')
+  const isDir = clean.endsWith('/') || clean.endsWith('\\');
+  // like GitHub Pages: /page -> page.html, /folder -> folder/index.html
+  const candidates = isDir
     ? [join(root, clean, 'index.html')]
-    : [join(root, clean), join(root, clean + '.html')];
+    : [join(root, clean), join(root, clean + '.html'), join(root, clean, 'index.html')];
   for (const file of candidates) {
     if (!file.startsWith(root)) continue;
     try { if ((await stat(file)).isFile()) return file; } catch { /* try next */ }
