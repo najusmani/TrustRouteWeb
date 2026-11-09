@@ -50,15 +50,16 @@ npx supabase link --project-ref <your-project-ref>
 ```
 
 ```bash
-npx supabase db push
+npx supabase db push --remote
 ```
 
-   `db push` creates the `enquiries` table (locked down with Row Level Security).
+   `db push` creates the `enquiries` table (locked down with Row Level Security). `--remote` makes it
+   target your online project; without it, newer CLI versions try a local Docker database instead.
 
 3. Store the secrets. Replace each `<...>`; for `IP_HASH_SALT` type any long random phrase:
 
 ```bash
-npx supabase secrets set RESEND_API_KEY=<your-resend-key> CONTACT_TO=najeeb@trustroutetechnologies.com "CONTACT_FROM=TrustRoute Website <website@trustroutetechnologies.com>" ALLOWED_ORIGINS=https://trustroutetechnologies.com,https://www.trustroutetechnologies.com IP_HASH_SALT=<long-random-phrase>
+npx supabase secrets set --project-ref <your-project-ref> RESEND_API_KEY=<your-resend-key> CONTACT_TO=najeeb@trustroutetechnologies.com "CONTACT_FROM=TrustRoute Website <website@trustroutetechnologies.com>" ALLOWED_ORIGINS=https://trustroutetechnologies.com,https://www.trustroutetechnologies.com IP_HASH_SALT=<long-random-phrase>
 ```
 
    Optional: `SEND_ACKNOWLEDGEMENT=true` also emails the enquirer a short "we received your enquiry"
@@ -68,7 +69,7 @@ npx supabase secrets set RESEND_API_KEY=<your-resend-key> CONTACT_TO=najeeb@trus
 4. Deploy the function:
 
 ```bash
-npx supabase functions deploy contact --no-verify-jwt
+npx supabase functions deploy contact --project-ref <your-project-ref> --no-verify-jwt
 ```
 
 5. Open `site/contact.html` and replace `YOUR-PROJECT-REF` in the form's `action` with your project
