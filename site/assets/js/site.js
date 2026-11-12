@@ -139,3 +139,44 @@ var CALENDLY_URL = 'https://calendly.com/najusmani/30min';
     });
   }
 })();
+
+// Product scenes (e.g. SettleDesk): play once when scrolled into view; [data-loop] scenes replay while visible.
+(function () {
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Hold each scene at its first frame until it is well into the viewport (position check, so it also works
+  // when scrolling fast or when the browser skips intersection updates).
+  var scenes = [].slice.call(document.querySelectorAll('[data-scene]'));
+  scenes.forEach(function (el) { el.setAttribute('data-armed', ''); });
+  var sceneTick = false;
+  function playVisible() {
+    sceneTick = false;
+    var limit = window.innerHeight * 0.8;
+    scenes = scenes.filter(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < limit) { el.setAttribute('data-play', ''); return false; }
+      return true;
+    });
+  }
+  function requestScenes() { if (!sceneTick) { sceneTick = true; requestAnimationFrame(playVisible); } }
+  window.addEventListener('scroll', requestScenes, { passive: true });
+  window.addEventListener('resize', requestScenes);
+  window.addEventListener('load', playVisible);
+  playVisible();
+  document.querySelectorAll('[data-loop]').forEach(function (el) {
+    var visible = true;
+    var watch = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.target === el) visible = en.isIntersecting; });
+    });
+    watch.observe(el);
+    var every = (parseFloat(el.getAttribute('data-loop')) || 10) * 1000;
+    setInterval(function () {
+      if (!visible || document.hidden || !el.isConnected) return;
+      // restart every CSS animation inside by swapping in a fresh copy of the scene
+      var fresh = el.cloneNode(true);
+      watch.unobserve(el);
+      el.parentNode.replaceChild(fresh, el);
+      el = fresh;
+      watch.observe(el);
+    }, every);
+  });
+})();

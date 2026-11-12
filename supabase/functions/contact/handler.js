@@ -20,6 +20,7 @@ export const INTERESTS = {
   meridian: 'Meridian (customer intelligence)',
   ai: 'AI Banking',
   agency: 'Agency Banking',
+  settledesk: 'SettleDesk (bulk payments)',
   other: 'Something else',
 };
 
