@@ -18,18 +18,19 @@ ARTICLES = [
 {
  'slug': 'introducing-ai-and-agency-banking',
  'category': 'News',
- 'title': 'Introducing AI Banking, Agency Banking and SettleDesk',
- 'seo_title': 'New: AI Banking, Agency Banking and SettleDesk | TrustRoute',
- 'description': 'Three new TrustRoute solutions: AI Banking, Agency Banking to bring banking closer to customers, and SettleDesk for bulk payments checked first.',
+ 'title': 'Introducing AI Banking, Agency Banking, SettleDesk and TrustCTS',
+ 'seo_title': 'New: AI & Agency Banking, SettleDesk, TrustCTS | TrustRoute',
+ 'description': 'Four new TrustRoute solutions: AI Banking, Agency Banking, SettleDesk for bulk payments and TrustCTS for cheque truncation and clearing.',
  'image': '1531746790731-6c087fecd65a', 'image_alt': 'A white robotic hand, representing artificial intelligence',
  'takeaways': [
    'AI Banking brings AI to customers, staff and risk teams, with people in control.',
    'Agency Banking turns local shops and outlets into points of service.',
    'SettleDesk checks every bulk payment against your bank before the money moves.',
-   'All three integrate with your core banking system; demonstrations are available now.',
+   'TrustCTS clears every cheque within the window and posts it exactly once.',
+   'All four integrate with your core banking system; demonstrations are available now.',
  ],
  'body': """
-<p class="lead">Today we are introducing three new solutions. Each answers the same question that banks ask us most often: how do we serve more customers, better, without adding cost and risk?</p>
+<p class="lead">Today we are introducing four new solutions. Each answers the same question that banks ask us most often: how do we serve more customers, better, without adding cost and risk?</p>
 
 <h2>AI Banking: intelligence, <em>under your control</em></h2>
 <p>AI is changing what customers expect and what banking teams can do. But in a regulated industry, AI is only valuable when it is useful, explainable and governed. <a href="/ai-banking">AI Banking</a> brings it to four places where it helps most:</p>
@@ -53,11 +54,21 @@ ARTICLES = [
 </ul>
 <p>New file layouts are set up in the console without code, and every decision is recorded permanently, ready for audit.</p>
 
+<h2>TrustCTS: every cheque, <em>cleared with certainty</em></h2>
+<p>Cheques remain an important payment method in many markets, and continuous clearing leaves little room for delay. <a href="/trustcts">TrustCTS</a> is a cheque truncation and clearing platform that connects branch scanners, the clearing house and core banking:</p>
+<ul>
+<li><strong>Capture you can trust:</strong> image quality and MICR checked at the scanner and again on the server, with no browser plug-ins and store-and-forward if the network drops.</li>
+<li><strong>Decided within the clearing window:</strong> inward cheques are prioritised by live expiry clocks, with straight-through decisions and signature referrals.</li>
+<li><strong>Money moves exactly once:</strong> every posting goes through an idempotent journal, and unknown outcomes are resolved by inquiry, never by a blind retry.</li>
+<li><strong>Reconciled three ways:</strong> clearing house, core banking and TrustCTS, with GL checks and break management.</li>
+</ul>
+<p>Clearing rules live in scheme packs, so new schemes plug in without changing the core; packs for India (NPCI CTS) and the Eastern Caribbean (ECACH) are in development.</p>
+
 <h2>Built to work together</h2>
-<p>All three solutions integrate with your core banking system and complement our existing range. The AI assistant can run alongside <a href="/whatsapp-banking">WhatsApp Banking</a>; agents give <a href="/wallet-banking">Wallet Banking</a> customers convenient places to cash in and out; SettleDesk delivers checked payment files straight into core systems, including Oracle FLEXCUBE; and <a href="/meridian">Meridian</a> brings it all together in a single view of each customer.</p>
+<p>All four solutions integrate with your core banking system and complement our existing range. The AI assistant can run alongside <a href="/whatsapp-banking">WhatsApp Banking</a>; agents give <a href="/wallet-banking">Wallet Banking</a> customers convenient places to cash in and out; SettleDesk delivers checked payment files straight into core systems, including Oracle FLEXCUBE; TrustCTS is pre-integrated with Oracle FLEXCUBE; and <a href="/meridian">Meridian</a> brings it all together in a single view of each customer.</p>
 
 <h2>See them in action</h2>
-<p>Demonstrations of AI Banking, Agency Banking and SettleDesk are available now. If you are exploring AI, agent networks or safer bulk payments at your institution, we would be glad to show you, and to talk through how each would fit your systems, your customers and your regulator.</p>
+<p>Demonstrations of AI Banking, Agency Banking, SettleDesk and TrustCTS are available now. If you are exploring AI, agent networks, safer bulk payments or cheque clearing at your institution, we would be glad to show you, and to talk through how each would fit your systems, your customers and your regulator.</p>
 """,
 },
 {
