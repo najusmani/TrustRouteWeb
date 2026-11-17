@@ -21,6 +21,7 @@ export const INTERESTS = {
   ai: 'AI Banking',
   agency: 'Agency Banking',
   settledesk: 'SettleDesk (bulk payments)',
+  trustcts: 'TrustCTS (cheque clearing)',
   other: 'Something else',
 };
 
