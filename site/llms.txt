@@ -1,0 +1,41 @@
+# TrustRoute Technologies
+
+> Independent banking technology advisory and solutions for banks and financial institutions worldwide, based in Burnaby, British Columbia, Canada. Founded by Najeebullah Usmani, a former CIO and CFO with 20 years across the Middle East, Asia, the Caribbean and North America.
+
+## Firm and advisory
+
+- [About TrustRoute](https://trustroutetechnologies.com/about): Independent banking technology firm founded by Najeebullah Usmani, former CIO and CFO with 20 years across the Middle East, Asia, Caribbean and North America.
+- [Banking Technology Advisory & Oracle FLEXCUBE](https://trustroutetechnologies.com/advisory): Independent advice on digital banking strategy, core banking and switch selection, Oracle FLEXCUBE implementation, upgrades and migration, and testing.
+- [Contact TrustRoute](https://trustroutetechnologies.com/contact): Contact TrustRoute Technologies or book a 30-minute introductory call about banking technology advisory and solutions.
+- [TrustRoute Technologies](https://trustroutetechnologies.com/): Independent banking technology advisory and solutions: core banking, Oracle FLEXCUBE, payments, SMS and wallet banking, for banks worldwide.
+- [Banking Solutions: SMS, WhatsApp & Wallet](https://trustroutetechnologies.com/solutions): Banking solutions from TrustRoute: SMS, WhatsApp, wallet and agency banking, AI banking, SettleDesk, TrustCTS, SwitchProof, FEIP, Meridian and TrustForge.
+
+## Solutions
+
+- [Agency Banking Platform: Agents, Cash & KYC](https://trustroutetechnologies.com/agency-banking): Agency banking for banks: agent onboarding and management, cash-in and cash-out with float management, account opening and KYC, payments and commissions.
+- [AI Banking: Assistants, Copilots, Fraud & Credit](https://trustroutetechnologies.com/ai-banking): AI for banks: a customer AI assistant, a staff copilot, fraud and anomaly detection, and AI-assisted credit scoring, with people in control.
+- [FEIP: FLEXCUBE Parameter & Change Control](https://trustroutetechnologies.com/feip): Capture, approve, promote and audit every Oracle FLEXCUBE parameter change, with maker-checker approvals, environment compare and rollback.
+- [Meridian: Customer Intelligence for Banks](https://trustroutetechnologies.com/meridian): A 360-degree customer view on top of your core banking system, with CRM, insights, moments and events, and a suggested next best action.
+- [SettleDesk: Bulk Payments, Checked First](https://trustroutetechnologies.com/settledesk): Bulk payment platform for banks: every payroll, vendor, tax and refund payment checked, approved and proven before the money moves.
+- [SMS & USSD Banking for Banks](https://trustroutetechnologies.com/sms-banking): SMS and USSD banking: balances, alerts, one-time passcodes and transfers on any phone, with no app needed, integrated with your core banking system.
+- [SwitchProof](https://trustroutetechnologies.com/switchproof): Designed for Oracle FLEXCUBE switch and regression testing, with load and UAT testing, switch customisation, stand-in processing, accounting and reports.
+- [TrustCTS: Cheque Truncation & Clearing](https://trustroutetechnologies.com/trustcts): Image-based cheque clearing for banks: capture, present, decide within the clearing window, post exactly once to core banking and reconcile three ways.
+- [TrustForge: AI Agent for Oracle FLEXCUBE](https://trustroutetechnologies.com/trustforge): TrustForge is an AI agent for Oracle FLEXCUBE customization: describe the change, agree a plan, and get radxml, hook packages and JavaScript ready for ODT.
+- [White-Label Wallet Banking Platform](https://trustroutetechnologies.com/wallet-banking): White-label wallet banking: onboarding and KYC, P2P transfers, merchant payments and cash-in/cash-out under your own brand.
+- [WhatsApp Banking for Banks](https://trustroutetechnologies.com/whatsapp-banking): Balances, alerts, payments and support in WhatsApp, securely connected to your core banking system, with live agent handover.
+
+## TrustForge app
+
+- [TrustForge](https://forge.trustroutetechnologies.com/): AI agent for Oracle FLEXCUBE customization, built on Anthropic.
+
+## Insights
+
+- [AI for FLEXCUBE Development: A CIO Governance Checklist](https://trustroutetechnologies.com/insights/ai-flexcube-governance-checklist): AI can cut the cost of core banking development, but banks need controls. A practical governance checklist for using AI on Oracle FLEXCUBE.
+- [Choosing a Payment Switch: Key RFP Questions](https://trustroutetechnologies.com/insights/choosing-a-payment-switch): A payment switch is a decade-long decision. The questions selection committees should answer on coverage, resilience, integration, security and cost.
+- [FLEXCUBE CUSTOM Layer: Customize Without Breaking Upgrades](https://trustroutetechnologies.com/insights/flexcube-custom-layer): How Oracle FLEXCUBE release layers work, what belongs in the CUSTOM layer, and a checklist for customizations that survive the next upgrade.
+- [New: AI & Agency Banking, SettleDesk, TrustCTS](https://trustroutetechnologies.com/insights/introducing-ai-and-agency-banking): Four new TrustRoute solutions: AI Banking, Agency Banking, SettleDesk for bulk payments and TrustCTS for cheque truncation and clearing.
+- [Introducing TrustForge: AI Agent for FLEXCUBE](https://trustroutetechnologies.com/insights/introducing-trustforge): TrustForge is an AI agent, built on Anthropic, that turns a FLEXCUBE change described in plain words into files ready to load in ODT.
+- [ISO 20022 Migration: What Banks Should Plan Now](https://trustroutetechnologies.com/insights/iso-20022-migration): The cross-border deadline has passed, but ISO 20022 work is not finished. Where banks should focus next: data, translation, testing and operations.
+- [Launching a Wallet Programme: Key Decisions](https://trustroutetechnologies.com/insights/launching-a-wallet-programme): A successful mobile wallet is a business, not just a product. The decisions on proposition, regulation, funds, agents, merchants and operations.
+- [Simulating the Switch: Certify Before Go-Live](https://trustroutetechnologies.com/insights/simulating-the-switch): Testing against live ATMs, POS terminals and networks is slow and costly. How simulation-led testing reduces risk, rework and certification surprises.
+- [Why SMS Banking Reaches Customers Apps Cannot](https://trustroutetechnologies.com/insights/sms-banking-reach): Mobile apps get the attention, but SMS and USSD still reach every phone. Where SMS banking fits, how to keep it secure, and how to design it well.

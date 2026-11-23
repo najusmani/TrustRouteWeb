@@ -16,6 +16,53 @@ AUTHOR = 'TrustRoute Technologies'
 
 ARTICLES = [
 {
+ 'slug': 'introducing-trustforge',
+ 'category': 'News',
+ 'title': 'Introducing TrustForge: an AI agent for Oracle FLEXCUBE customization',
+ 'seo_title': 'Introducing TrustForge: AI Agent for FLEXCUBE | TrustRoute',
+ 'description': 'TrustForge is an AI agent, built on Anthropic, that turns a FLEXCUBE change described in plain words into files ready to load in ODT.',
+ 'image': '1504639725590-34d0984388bd',
+ 'image_alt': 'Code on a screen, seen through a pair of glasses',
+ 'takeaways': [
+   'TrustForge turns a FLEXCUBE change described in plain words into ODT-ready files.',
+   'Every change goes in the CUSTOM layer; Oracle code stays as shipped.',
+   'Nothing is built until you approve the plan.',
+   'Supports FLEXCUBE Universal Banking 14.6 and 14.7; start free today.',
+ ],
+ 'body': """
+<p class="lead">Every bank running Oracle FLEXCUBE knows the pattern: a small change to a screen or a charge becomes weeks of analysis, scarce ODT specialists and a sizeable invoice. Today we are introducing <a href="/trustforge">TrustForge</a> to change that.</p>
+
+<h2>What TrustForge is</h2>
+<p>TrustForge is an AI agent for Oracle FLEXCUBE customization, built on Anthropic’s AI. It works like a senior ODT developer on your team: it understands radxml, release layers and hook packages, and the rules that make a screen load, save and deploy. It supports FLEXCUBE Universal Banking 14.6 and 14.7, and its output has been verified end to end on 14.7.0.6.0.</p>
+
+<h2>How it works</h2>
+<ol>
+<li><strong>Describe:</strong> say what you need in plain words and upload your development objects: radxml, table definitions, packages or JavaScript.</li>
+<li><strong>Discuss:</strong> TrustForge asks only what it needs and agrees the plan with you, item by item.</li>
+<li><strong>Build:</strong> once you approve, it builds each file and checks it against ODT’s load and save rules.</li>
+<li><strong>Deliver:</strong> you download the files, the deploy order and unit tests, ready to load in ODT.</li>
+</ol>
+
+<h2>Six kinds of job</h2>
+<p>New FLEXCUBE screens, changes to Oracle’s own functions in the CUSTOM layer, radxml reviews, hook packages and release JavaScript, Silent ODT for bulk generation and web services, and answers to ODT questions from the guides.</p>
+
+<h2>Built for <em>how banks work</em></h2>
+<ul>
+<li><strong>Oracle’s code is never edited.</strong> Changes go in the CUSTOM layer and Oracle values are checked, so upgrades stay safe.</li>
+<li><strong>Nothing without approval.</strong> You see the plan and the files before anything is built.</li>
+<li><strong>No secrets in files.</strong> Passwords and keys are left as placeholders for your team.</li>
+<li><strong>Your data stays yours.</strong> Uploaded objects are used for your job only, and a private install keeps everything inside your network.</li>
+</ul>
+
+<h2>Real jobs, real results</h2>
+<p>On a live FLEXCUBE 14.7 environment, TrustForge built a new customer risk profile screen (STDCURSK) that is now deployed and in use. On another job it added a complete sixth charge to Oracle’s ARC maintenance (IFDATMMN): 36 new fields in the CUSTOM layer, with no Oracle values changed.</p>
+
+<h2>Start free</h2>
+<p>The Free plan includes radxml reviews and ODT questions. The Partner plan is $100 USD per seat per month with all six job types, and banks can arrange a private install in their own cloud. For many changes, that means up to 90% lower development cost; savings depend on scope, and your team still reviews, deploys and tests every change.</p>
+<p>Start your first job at <a href="https://forge.trustroutetechnologies.com/" target="_blank" rel="noopener">forge.trustroutetechnologies.com</a>, or read more on the <a href="/trustforge">TrustForge page</a>.</p>
+""",
+},
+{
  'slug': 'introducing-ai-and-agency-banking',
  'category': 'News',
  'title': 'Introducing AI Banking, Agency Banking, SettleDesk and TrustCTS',
@@ -72,6 +119,93 @@ ARTICLES = [
 """,
 },
 {
+ 'slug': 'flexcube-custom-layer',
+ 'category': 'Core Banking',
+ 'title': 'The CUSTOM layer: customizing Oracle FLEXCUBE without breaking upgrades',
+ 'seo_title': 'FLEXCUBE CUSTOM Layer: Customize Without Breaking Upgrades',
+ 'description': 'How Oracle FLEXCUBE release layers work, what belongs in the CUSTOM layer, and a checklist for customizations that survive the next upgrade.',
+ 'image': '1554469384-e58fac16e23a',
+ 'image_alt': 'Curved glass facade of a modern building',
+ 'takeaways': [
+   'FLEXCUBE separates Oracle code (KERNEL) from bank changes (CUSTOM).',
+   'Customizations made in the CUSTOM layer survive upgrades; edits to KERNEL do not.',
+   'New fields belong in extension tables, with labels and amendable settings.',
+   'Check that no Oracle value changes before you load anything.',
+ ],
+ 'body': """
+<p class="lead">The most expensive FLEXCUBE customization is not the one that takes longest to build. It is the one that breaks at the next upgrade. Release layers are how you avoid that.</p>
+
+<h2>How release layers work</h2>
+<p>Oracle FLEXCUBE separates what Oracle ships from what a bank adds. Oracle’s own definitions live in the <strong>KERNEL</strong> layer. Regional or group variations can sit in a <strong>CLUSTER</strong> layer, and a bank’s own changes belong in the <strong>CUSTOM</strong> layer. At runtime, the layers combine, so a screen can show Oracle’s fields together with your own.</p>
+<p>The rule that keeps upgrades safe is simple: never change KERNEL. When Oracle ships a new release, KERNEL is replaced. Anything edited there is lost or, worse, silently conflicts with the new code.</p>
+
+<h2>What belongs <em>in the CUSTOM layer</em></h2>
+<ul>
+<li><strong>Screen changes</strong> in the CUSTOM section of the function’s radxml: new fields, tabs, sections and sub-screens, built in ODT.</li>
+<li><strong>New data</strong> in extension tables linked to Oracle’s tables, rather than new columns on Oracle’s own tables.</li>
+<li><strong>Back-end logic</strong> in the CUSTOM hook package (named for the module and function, ending in _CUSTOM) for validations, defaulting and processing.</li>
+<li><strong>Front-end logic</strong> in the CUSTOM release JavaScript for the function.</li>
+<li><strong>Labels and static data</strong> scripted alongside, so every environment gets the same result.</li>
+</ul>
+
+<h2>The details that cause trouble</h2>
+<p>Most failed customizations fail on small things. New fields that are not marked as amendable cannot be changed on Modify, and FLEXCUBE reports an amendment error. Lists of values with poorly bound queries slow screens on large tables. Labels missing from one environment make a screen look broken in UAT. The TrustForge guides cover several of these in depth, including <a href="https://forge.trustroutetechnologies.com/learn/flexcube-st-amnd-002-amendable" target="_blank" rel="noopener">fixing ST-AMND-002 on Modify</a> and <a href="https://forge.trustroutetechnologies.com/learn/flexcube-add-field-to-screen" target="_blank" rel="noopener">adding a field in the CUSTOM layer</a>.</p>
+
+<h2>A checklist before you load</h2>
+<ol>
+<li>Every new element is tagged to the CUSTOM layer and your release.</li>
+<li>No Oracle (KERNEL) value has changed. Compare before and after.</li>
+<li>New fields have their data source, block field, field set, labels and amendable settings.</li>
+<li>Hook code only extends Oracle logic; it skips or replaces it only where that is the agreed design.</li>
+<li>No passwords or keys appear in any file.</li>
+<li>Deploy order and unit tests are written down, and the change is tested in your own environments.</li>
+</ol>
+
+<p><a href="/trustforge">TrustForge</a> applies this discipline automatically: it builds in the CUSTOM layer only and checks that no Oracle value changes, so your team can focus on review and testing.</p>
+""",
+},
+{
+ 'slug': 'ai-flexcube-governance-checklist',
+ 'category': 'Strategy',
+ 'title': 'AI for FLEXCUBE development: a governance checklist for bank CIOs',
+ 'seo_title': 'AI for FLEXCUBE Development: A CIO Governance Checklist',
+ 'description': 'AI can cut the cost of core banking development, but banks need controls. A practical governance checklist for using AI on Oracle FLEXCUBE.',
+ 'image': '1600880292203-757bb62b4baf',
+ 'image_alt': 'Professionals reviewing work together',
+ 'takeaways': [
+   'Share development objects only: never customer or production data.',
+   'Keep a person approving every plan and every file.',
+   'Enforce layer discipline and keep secrets out of generated code.',
+   'Choose a deployment model your risk and compliance teams can sign off.',
+ ],
+ 'body': """
+<p class="lead">AI agents can now design FLEXCUBE screens, write hook code and review radxml in minutes. For a bank, the question is not whether the technology works, but whether it can be used under the controls a regulator expects.</p>
+
+<h2>1. Decide what may be shared</h2>
+<p>Limit AI tools to development objects: radxml, table definitions, packages and JavaScript. Customer data, production extracts and credentials should never be uploaded. Write this down as policy, and choose tools that make it easy to follow.</p>
+
+<h2>2. Keep a person <em>in charge of every change</em></h2>
+<p>The AI should propose; your developers should decide. Require a plan that is reviewed and approved before anything is built, and keep the existing review, deployment and testing steps for the files it produces.</p>
+
+<h2>3. Enforce layer discipline</h2>
+<p>Generated changes should live in the CUSTOM layer only, with a check that Oracle’s KERNEL values are unchanged. This protects upgrades and makes every change easy to identify and roll back.</p>
+
+<h2>4. Keep secrets out of code</h2>
+<p>Passwords, keys and connection strings should appear only as placeholders in generated files, to be filled in by your team through your normal secrets process.</p>
+
+<h2>5. Choose the right deployment model</h2>
+<p>Hosted tools are fastest to adopt. Where data must stay inside the bank, look for a private install that runs in your own cloud on your own model account, such as Anthropic, AWS Bedrock or Google Vertex, so nothing leaves your network.</p>
+
+<h2>6. Keep the record</h2>
+<p>Retain each job’s request, agreed plan and delivered files alongside your change records, so audit can see what was asked, what was approved and what was deployed.</p>
+
+<h2>7. Measure the value</h2>
+<p>Track cost and time per change before and after adoption, and how much rework testing finds. That evidence turns a promising pilot into an approved programme.</p>
+
+<p>TrustForge was designed around these controls: development objects only, approval before building, CUSTOM layer only, no secrets in files, and an optional private install. Read more on the <a href="/trustforge">TrustForge page</a> or the guide to <a href="https://forge.trustroutetechnologies.com/learn/ai-assistant-core-banking-development" target="_blank" rel="noopener">using an AI assistant for core banking development, safely</a>.</p>
+""",
+},
+{
  'slug': 'iso-20022-migration',
  'category': 'Payments',
  'title': 'ISO 20022 migration: what banks should be planning for now',
@@ -123,7 +257,7 @@ ARTICLES = [
  'slug': 'sms-banking-reach',
  'category': 'Channels',
  'title': 'Why SMS banking still reaches customers that apps cannot',
- 'seo_title': 'Why SMS Banking Still Reaches Customers Apps Cannot | TrustRoute',
+ 'seo_title': 'Why SMS Banking Reaches Customers Apps Cannot | TrustRoute',
  'description': 'Mobile apps get the attention, but SMS and USSD still reach every phone. Where SMS banking fits, how to keep it secure, and how to design it well.',
  'image': '1556742049-0cfed4f6a45d', 'image_alt': 'Customer using a mobile phone',
  'takeaways': [
@@ -208,7 +342,7 @@ ARTICLES = [
  'slug': 'choosing-a-payment-switch',
  'category': 'Strategy',
  'title': 'Choosing a payment switch: questions to ask before the RFP',
- 'seo_title': 'Choosing a Payment Switch: Questions Before the RFP | TrustRoute',
+ 'seo_title': 'Choosing a Payment Switch: Key RFP Questions | TrustRoute',
  'description': 'A payment switch is a decade-long decision. The questions selection committees should answer on coverage, resilience, integration, security and cost.',
  'image': '1497366811353-6870744d04b2', 'image_alt': 'Quiet modern office interior',
  'takeaways': [

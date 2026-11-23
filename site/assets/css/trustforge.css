@@ -1,0 +1,96 @@
+/* =========================================================
+   TrustForge page: builds on settledesk.css (scene engine, hero,
+   flow, feature rows, cards, security, facts).
+   ========================================================= */
+
+/* ---------- hero: a request becomes ODT-ready files ---------- */
+.tf-wrap{position:relative;width:min(100%,500px);justify-self:end}
+.tf-wrap:after{content:"";position:absolute;inset:-10px;border:1px solid rgba(201,174,120,.18);pointer-events:none}
+.tf-panel{padding:20px;border:1px solid rgba(201,174,120,.28);background:rgba(9,21,48,.82);backdrop-filter:blur(8px);box-shadow:0 50px 90px -40px rgba(0,0,0,.8);color:#D9DEE8}
+.tf-top{display:flex;align-items:center;gap:10px;margin:0 0 16px;font:500 10px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:#9DA8BF}
+.tf-top b{color:#fff;font:600 13px var(--mono);letter-spacing:0;text-transform:none}
+.tf-top .tag{margin-left:auto}
+.tf-msg{max-width:88%;padding:12px 14px;font-size:14px;line-height:1.45}
+.tf-msg small{display:block;margin-bottom:4px;font:500 9px var(--sans);letter-spacing:.22em;text-transform:uppercase;opacity:.7}
+.tf-user{margin-left:auto;background:var(--gold-soft);color:var(--navy-deep)}
+.tf-bot{margin-top:10px;background:rgba(255,255,255,.06);border:1px solid rgba(201,174,120,.2);color:#E9E4D8}
+.tf-reply{display:grid;margin-top:10px}
+.tf-reply>*{grid-area:1/1}
+.tf-typing{display:inline-flex;gap:5px;align-items:center;width:max-content;padding:14px 16px;background:rgba(255,255,255,.06)}
+.tf-typing i{width:6px;height:6px;border-radius:50%;background:var(--gold-soft)}
+.tf-plan{display:flex;gap:8px;margin-top:10px}
+.tf-plan span{flex:1;padding:8px 10px;background:rgba(201,174,120,.1);text-align:center;font:500 11px var(--sans);color:#9DA8BF}
+.tf-plan b{display:block;font:400 26px/1 var(--serif);color:var(--gold-soft);margin-bottom:3px}
+.tf-files{display:grid;gap:6px;margin:12px 0 0;padding:0;list-style:none}
+.tf-files li{display:flex;align-items:center;gap:10px;padding:9px 12px;background:rgba(255,255,255,.04);font:500 12px var(--mono);color:#fff}
+.tf-files li em{margin-left:auto;font-style:normal;font:500 10px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft)}
+.tf-ready{display:flex;align-items:center;justify-content:center;gap:8px;margin:12px 0 0;padding:12px;background:var(--gold-soft);color:var(--navy-deep);font:500 13px var(--sans)}
+
+/* ---------- cost comparison ---------- */
+.tf-cost{width:min(100%,470px)}
+.tf-bar{margin:0 0 22px}
+.tf-bar p{display:flex;justify-content:space-between;margin:0 0 8px;font-size:14px;color:var(--mute)}
+.tf-bar p b{font:400 20px var(--serif);color:var(--navy)}
+.tf-bar .track{height:14px;background:var(--ivory);overflow:hidden}
+.tf-bar .fill{height:100%;transform-origin:left}
+.tf-bar.usual .fill{width:100%;background:#C9CED8}
+.tf-bar.forge .fill{width:10%;background:linear-gradient(90deg,var(--gold),var(--gold-soft))}
+.tf-bar small{display:block;margin-top:6px;font-size:12px;color:var(--stone)}
+.tf-save{display:flex;align-items:baseline;gap:14px;padding-top:18px;border-top:1px solid var(--hair)}
+.tf-save b{font:400 64px/1 var(--serif);color:var(--gold)}
+.tf-save span{font-size:14px;color:var(--mute)}
+
+/* ---------- results ---------- */
+.tf-results{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.tf-res{background:#fff;border:1px solid var(--hair);padding:36px 32px}
+.tf-res code{font:600 13px var(--mono);color:var(--gold);letter-spacing:.06em}
+.tf-res h3{font:400 30px/1.1 var(--serif);color:var(--navy);margin:14px 0 12px}
+.tf-res p{margin:0 0 18px;color:var(--mute);font-size:15px}
+.tf-res .nums{display:flex;gap:28px;padding-top:16px;border-top:1px solid var(--hair)}
+.tf-res .nums b{display:block;font:400 40px/1 var(--serif);color:var(--navy)}
+.tf-res .nums span{font-size:13px;color:var(--stone)}
+
+/* ---------- plans ---------- */
+.tf-plans .opt .price{font:400 44px/1 var(--serif);color:var(--navy);margin:6px 0 4px}
+.tf-plans .opt .per{font-size:13px;color:var(--stone)}
+.tf-plans .opt.hl{background:var(--navy);border-color:var(--navy)}
+.tf-plans .opt.hl h3,.tf-plans .opt.hl .price{color:#fff}
+.tf-plans .opt.hl p,.tf-plans .opt.hl li,.tf-plans .opt.hl .per{color:rgba(255,255,255,.72)}
+.tf-plans .opt.hl li{border-color:rgba(255,255,255,.14)}
+.tf-plans .opt .btn{margin-top:26px}
+
+/* ---------- learn ---------- */
+.tf-learn{border-top:1px solid var(--navy)}
+.tf-learn a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;padding:24px 0;border-bottom:1px solid var(--hair);transition:padding .6s var(--ease)}
+.tf-learn a:hover{padding-left:14px}
+.tf-learn b{font:400 24px/1.25 var(--serif);color:var(--navy);transition:color .3s}
+.tf-learn a:hover b{color:var(--gold)}
+.tf-learn span{display:block;margin-top:4px;color:var(--mute);font-size:15px}
+.tf-learn em{font-style:normal;font:500 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- motion ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .tf-wrap.run .tf-user,.tf-wrap.run .tf-plan span,.tf-wrap.run .tf-files li,.tf-wrap.run .tf-ready{animation:sd-pop .5s cubic-bezier(.2,.8,.2,1) calc(var(--t,0)*1s) both}
+  .tf-wrap.run .tf-typing{animation:sd-in .3s ease 1s both,sd-out .3s ease 2.1s forwards}
+  .tf-wrap.run .tf-typing i{animation:tf-dot 1s ease-in-out infinite}
+  .tf-wrap.run .tf-typing i:nth-child(2){animation-delay:.15s}
+  .tf-wrap.run .tf-typing i:nth-child(3){animation-delay:.3s}
+  .tf-wrap.run .tf-bot{animation:sd-in .4s ease 2.1s both}
+  .tf-bar .fill{animation:sd-grow 1.6s cubic-bezier(.2,.8,.2,1) calc(var(--t,0)*1s) both}
+}
+@keyframes tf-dot{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(-3px)}}
+.tf-typing{opacity:0}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){.tf-wrap{justify-self:start}.tf-results{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .tf-panel{padding:14px}
+  .tf-msg{max-width:100%}
+  .tf-files li em{display:none}
+  .tf-learn a{grid-template-columns:1fr}
+  .tf-save b{font-size:52px}
+}
+
+/* four-step flow (desktop); stacks on phones like the five-step flow */
+.sd-flow.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:760px){.sd-flow-scene .sd-flow.four{grid-template-columns:1fr}}

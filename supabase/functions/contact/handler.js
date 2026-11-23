@@ -22,6 +22,7 @@ export const INTERESTS = {
   agency: 'Agency Banking',
   settledesk: 'SettleDesk (bulk payments)',
   trustcts: 'TrustCTS (cheque clearing)',
+  trustforge: 'TrustForge (FLEXCUBE AI agent)',
   other: 'Something else',
 };
 

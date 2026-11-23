@@ -468,3 +468,18 @@ footer li{margin:12px 0}footer li a:hover{color:var(--gold)}
 .sp-card .more{margin-top:auto;font:500 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 @media (max-width:1100px){.sp-grid{grid-template-columns:1fr}.sp-card{grid-template-columns:210px 1fr;grid-template-rows:none}.sp-card .im{height:auto;min-height:230px}}
 @media (max-width:640px){.spotlight{padding:64px 0}.sp-card{grid-template-columns:1fr;grid-template-rows:auto 1fr}.sp-card .im{min-height:190px;height:190px}.sp-card .tx{padding:24px 20px}}
+
+/* ---------- HOME: featured product in the spotlight ---------- */
+.sp-feature{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);margin-bottom:24px;background:var(--navy);color:#fff;border:1px solid var(--navy);transition:box-shadow .6s var(--ease)}
+.sp-feature:hover{box-shadow:0 34px 70px -40px rgba(9,21,48,.7)}
+.sp-feature .tx{padding:44px 48px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.sp-feature .badge{font:500 10px var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold-soft);padding:5px 10px}
+.sp-feature h3{font:400 clamp(36px,3.4vw,50px)/1.05 var(--serif);margin:18px 0 12px}
+.sp-feature h3 em{color:var(--gold-soft)}
+.sp-feature p{margin:0 0 22px;color:rgba(255,255,255,.72);max-width:460px}
+.sp-feature .more{font:500 11px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft)}
+.sp-feature .im{overflow:hidden;min-height:300px}
+.sp-feature img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.sp-feature:hover img{transform:scale(1.04)}
+@media (max-width:1100px){.sp-feature{grid-template-columns:1fr}.sp-feature .im{min-height:220px;height:220px;order:-1}}
+@media (max-width:640px){.sp-feature .tx{padding:28px 22px}}
