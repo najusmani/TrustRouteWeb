@@ -30,7 +30,7 @@ ARTICLES = [
    'Supports FLEXCUBE Universal Banking 14.6 and 14.7; start free today.',
  ],
  'body': """
-<p class="lead">Every bank running Oracle FLEXCUBE knows the pattern: a small change to a screen or a charge becomes weeks of analysis, scarce ODT specialists and a sizeable invoice. Today we are introducing <a href="/trustforge">TrustForge</a> to change that.</p>
+<p class="lead">Every bank running Oracle FLEXCUBE knows the pattern: a small change to a screen or a charge becomes weeks of analysis, scarce ODT specialists and a sizeable invoice. Today we are introducing <a href="https://forge.trustroutetechnologies.com/">TrustForge</a> to change that.</p>
 
 <h2>What TrustForge is</h2>
 <p>TrustForge is an AI agent for Oracle FLEXCUBE customization, built on Anthropic’s AI. It works like a senior ODT developer on your team: it understands radxml, release layers and hook packages, and the rules that make a screen load, save and deploy. It supports FLEXCUBE Universal Banking 14.6 and 14.7, and its output has been verified end to end on 14.7.0.6.0.</p>
@@ -59,7 +59,7 @@ ARTICLES = [
 
 <h2>Start free</h2>
 <p>The Free plan includes radxml reviews and ODT questions. The Partner plan is $100 USD per seat per month with all six job types, and banks can arrange a private install in their own cloud. For many changes, that means up to 90% lower development cost; savings depend on scope, and your team still reviews, deploys and tests every change.</p>
-<p>Start your first job at <a href="https://forge.trustroutetechnologies.com/" target="_blank" rel="noopener">forge.trustroutetechnologies.com</a>, or read more on the <a href="/trustforge">TrustForge page</a>.</p>
+<p>Start your first job at <a href="https://forge.trustroutetechnologies.com/" target="_blank" rel="noopener">forge.trustroutetechnologies.com</a>, or read more on the <a href="https://forge.trustroutetechnologies.com/">TrustForge page</a>.</p>
 """,
 },
 {
@@ -161,7 +161,7 @@ ARTICLES = [
 <li>Deploy order and unit tests are written down, and the change is tested in your own environments.</li>
 </ol>
 
-<p><a href="/trustforge">TrustForge</a> applies this discipline automatically: it builds in the CUSTOM layer only and checks that no Oracle value changes, so your team can focus on review and testing.</p>
+<p><a href="https://forge.trustroutetechnologies.com/">TrustForge</a> applies this discipline automatically: it builds in the CUSTOM layer only and checks that no Oracle value changes, so your team can focus on review and testing.</p>
 """,
 },
 {
@@ -202,7 +202,7 @@ ARTICLES = [
 <h2>7. Measure the value</h2>
 <p>Track cost and time per change before and after adoption, and how much rework testing finds. That evidence turns a promising pilot into an approved programme.</p>
 
-<p>TrustForge was designed around these controls: development objects only, approval before building, CUSTOM layer only, no secrets in files, and an optional private install. Read more on the <a href="/trustforge">TrustForge page</a> or the guide to <a href="https://forge.trustroutetechnologies.com/learn/ai-assistant-core-banking-development" target="_blank" rel="noopener">using an AI assistant for core banking development, safely</a>.</p>
+<p>TrustForge was designed around these controls: development objects only, approval before building, CUSTOM layer only, no secrets in files, and an optional private install. Read more on the <a href="https://forge.trustroutetechnologies.com/">TrustForge page</a> or the guide to <a href="https://forge.trustroutetechnologies.com/learn/ai-assistant-core-banking-development" target="_blank" rel="noopener">using an AI assistant for core banking development, safely</a>.</p>
 """,
 },
 {

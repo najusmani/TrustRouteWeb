@@ -20,7 +20,6 @@
 - [SMS & USSD Banking for Banks](https://trustroutetechnologies.com/sms-banking): SMS and USSD banking: balances, alerts, one-time passcodes and transfers on any phone, with no app needed, integrated with your core banking system.
 - [SwitchProof](https://trustroutetechnologies.com/switchproof): Designed for Oracle FLEXCUBE switch and regression testing, with load and UAT testing, switch customisation, stand-in processing, accounting and reports.
 - [TrustCTS: Cheque Truncation & Clearing](https://trustroutetechnologies.com/trustcts): Image-based cheque clearing for banks: capture, present, decide within the clearing window, post exactly once to core banking and reconcile three ways.
-- [TrustForge: AI Agent for Oracle FLEXCUBE](https://trustroutetechnologies.com/trustforge): TrustForge is an AI agent for Oracle FLEXCUBE customization: describe the change, agree a plan, and get radxml, hook packages and JavaScript ready for ODT.
 - [White-Label Wallet Banking Platform](https://trustroutetechnologies.com/wallet-banking): White-label wallet banking: onboarding and KYC, P2P transfers, merchant payments and cash-in/cash-out under your own brand.
 - [WhatsApp Banking for Banks](https://trustroutetechnologies.com/whatsapp-banking): Balances, alerts, payments and support in WhatsApp, securely connected to your core banking system, with live agent handover.
 

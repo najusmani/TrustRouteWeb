@@ -17,7 +17,7 @@ SITE = ROOT / 'site'
 BASE = 'https://trustroutetechnologies.com'
 ORG_ID = BASE + '/#organization'
 TODAY = datetime.date.today().isoformat()
-SKIP = {'switch-simulators.html', '404.html'}            # redirect + error page
+SKIP = {'switch-simulators.html', 'trustforge.html', '404.html'}  # redirects + error page
 ROBOTS = '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">'
 
 PRODUCTS = {   # file -> (name, kind)
@@ -25,7 +25,7 @@ PRODUCTS = {   # file -> (name, kind)
     'wallet-banking.html': ('Wallet Banking', 'Service'), 'switchproof.html': ('SwitchProof', 'Service'),
     'feip.html': ('FEIP', 'Service'), 'meridian.html': ('Meridian', 'Service'), 'ai-banking.html': ('AI Banking', 'Service'),
     'agency-banking.html': ('Agency Banking', 'Service'), 'settledesk.html': ('SettleDesk', 'Service'),
-    'trustcts.html': ('TrustCTS', 'Service'), 'trustforge.html': ('TrustForge', 'SoftwareApplication'),
+    'trustcts.html': ('TrustCTS', 'Service'),
 }
 SECTIONS = {'about.html': 'The Firm', 'advisory.html': 'Advisory', 'solutions.html': 'Solutions',
             'contact.html': 'Contact', 'privacy.html': 'Privacy', 'terms.html': 'Terms'}
@@ -124,7 +124,8 @@ if m:
     org['hasOfferCatalog']['itemListElement'] = [
         {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': n, 'url': u}} for n, u in
         [('Banking Technology Advisory', BASE + '/advisory'), ('Oracle FLEXCUBE Advisory', BASE + '/advisory#flexcube')]
-        + [(v[0], url_for(k)) for k, v in PRODUCTS.items()]]
+        + [(v[0], url_for(k)) for k, v in PRODUCTS.items()]
+        + [('TrustForge', 'https://forge.trustroutetechnologies.com/')]]
     org['knowsAbout'] = sorted(set(org.get('knowsAbout', []) + ['Cheque truncation', 'Bulk payments', 'Agency banking',
                                                                  'AI in banking', 'FLEXCUBE ODT', 'Customer intelligence']))
     org['subOrganization'] = None
@@ -133,7 +134,7 @@ if m:
     home.write_text(s, encoding='utf-8')
 
 # sitemap
-prio = lambda rel: '1.0' if rel == 'index.html' else '0.9' if rel in ('solutions.html', 'advisory.html', 'trustforge.html') \
+prio = lambda rel: '1.0' if rel == 'index.html' else '0.9' if rel in ('solutions.html', 'advisory.html') \
     else '0.6' if rel.startswith('insights/') and rel != 'insights/index.html' else '0.8'
 urls = ''.join(f'  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod><priority>{prio(r)}</priority></url>\n' for r, u, _, _ in summary)
 (SITE / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
