@@ -337,6 +337,12 @@ footer ul{list-style:none;margin:0;padding:0}
 footer li{margin:12px 0}footer li a:hover{color:var(--gold)}
 .legal{border-top:1px solid var(--hair);padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:400 11px var(--sans);letter-spacing:.2em;text-transform:uppercase}
 .legal a:hover{color:var(--gold)}
+.tech{margin:22px 0 0;font-size:14px;line-height:1.7;color:var(--mute)}
+.tech span{font:500 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-right:10px}
+.tech a:hover{color:var(--gold)}
+.tech small{display:block;margin-top:6px;font-size:12px;color:var(--stone)}
+.ext{border-bottom:1px solid var(--gold-soft)}
+.ext:hover{color:var(--gold)}
 
 @media (prefers-reduced-motion:reduce){
   *,*:before,*:after{animation:none!important;transition:none!important}

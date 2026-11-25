@@ -33,7 +33,7 @@ ARTICLES = [
 <p class="lead">Every bank running Oracle FLEXCUBE knows the pattern: a small change to a screen or a charge becomes weeks of analysis, scarce ODT specialists and a sizeable invoice. Today we are introducing <a href="https://forge.trustroutetechnologies.com/">TrustForge</a> to change that.</p>
 
 <h2>What TrustForge is</h2>
-<p>TrustForge is an AI agent for Oracle FLEXCUBE customization, built on Anthropic’s AI. It works like a senior ODT developer on your team: it understands radxml, release layers and hook packages, and the rules that make a screen load, save and deploy. It supports FLEXCUBE Universal Banking 14.6 and 14.7, and its output has been verified end to end on 14.7.0.6.0.</p>
+<p>TrustForge is an AI agent for Oracle FLEXCUBE customization, built on <a class="ext" href="https://www.anthropic.com/" target="_blank" rel="noopener">Anthropic</a>’s AI. It works like a senior ODT developer on your team: it understands radxml, release layers and hook packages, and the rules that make a screen load, save and deploy. It supports FLEXCUBE Universal Banking 14.6 and 14.7, and its output has been verified end to end on 14.7.0.6.0.</p>
 
 <h2>How it works</h2>
 <ol>
