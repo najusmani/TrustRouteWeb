@@ -1,4 +1,5 @@
 # Publishes the /site folder to GitHub Pages on every push to main.
+# If the deploy step fails on GitHub's side, use Actions > Deploy website > Re-run jobs.
 name: Deploy website
 
 on:
