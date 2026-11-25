@@ -128,6 +128,7 @@ if m:
         + [('TrustForge', 'https://forge.trustroutetechnologies.com/')]]
     org['knowsAbout'] = sorted(set(org.get('knowsAbout', []) + ['Cheque truncation', 'Bulk payments', 'Agency banking',
                                                                  'AI in banking', 'FLEXCUBE ODT', 'Customer intelligence']))
+    org['sameAs'] = ['https://www.linkedin.com/company/trustroutetechnologies']
     org['subOrganization'] = None
     org.pop('subOrganization')
     s = s.replace(m.group(0), '<script type="application/ld+json">\n' + json.dumps(org, indent=1, ensure_ascii=False) + '\n</script>', 1)
@@ -153,6 +154,7 @@ llms = ('# TrustRoute Technologies\n\n'
         + section('Firm and advisory', ['index.html', 'about.html', 'advisory.html', 'solutions.html', 'contact.html']) + '\n'
         + section('Solutions', products) + '\n'
         + '## TrustForge app\n\n- [TrustForge](https://forge.trustroutetechnologies.com/): AI agent for Oracle FLEXCUBE customization, built on Anthropic.\n\n'
-        + section('Insights', articles))
+        + section('Insights', articles) + '\n'
+        + '## Company profile\n\n- [LinkedIn](https://www.linkedin.com/company/trustroutetechnologies): company updates and announcements.\n')
 (SITE / 'llms.txt').write_text(llms, encoding='utf-8')
 print(f'pages processed: {len(pages)} | indexable: {len(summary)} | sitemap URLs: {len(summary)}')

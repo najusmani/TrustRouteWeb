@@ -38,3 +38,7 @@
 - [Launching a Wallet Programme: Key Decisions](https://trustroutetechnologies.com/insights/launching-a-wallet-programme): A successful mobile wallet is a business, not just a product. The decisions on proposition, regulation, funds, agents, merchants and operations.
 - [Simulating the Switch: Certify Before Go-Live](https://trustroutetechnologies.com/insights/simulating-the-switch): Testing against live ATMs, POS terminals and networks is slow and costly. How simulation-led testing reduces risk, rework and certification surprises.
 - [Why SMS Banking Reaches Customers Apps Cannot](https://trustroutetechnologies.com/insights/sms-banking-reach): Mobile apps get the attention, but SMS and USSD still reach every phone. Where SMS banking fits, how to keep it secure, and how to design it well.
+
+## Company profile
+
+- [LinkedIn](https://www.linkedin.com/company/trustroutetechnologies): company updates and announcements.
